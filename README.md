@@ -1,1 +1,0 @@
-# 6mini.github.io
