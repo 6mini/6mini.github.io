@@ -1,7 +1,6 @@
 ---
 title: '[Retrospect] CodeStates AI Bootcamp 탑승'
-description: 직업군인이었던 내가 전역 후 '개발자'로서의 길을 걸으려는 이유는 그리 복잡하지 않다. 항상 사회에 맞춰 '소비자'로서만 살았는데, 이제는 가치를 제공하는 사람이 되고 싶었다.
-사실 목적은 '경제적 자유'였다. 창업가로서 무언가를 창조해내고 싶었다. 기술이 없는 내가 해 볼 수 있는 건 다 해보고 싶었다. 그렇게 코딩을 배우기 시작했다.
+description: 코드스테이츠 부트캠프 탑승기 및 OT 간략 요약
 categories:
  - Retrospect
 tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, 회고]
