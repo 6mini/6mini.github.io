@@ -1,6 +1,7 @@
 ---
 title: '[Retrospect] CodeStates AI Bootcamp 탑승'
-description: 
+description: 직업군인이었던 내가 전역 후 '개발자'로서의 길을 걸으려는 이유는 그리 복잡하지 않다. 항상 사회에 맞춰 '소비자'로서만 살았는데, 이제는 가치를 제공하는 사람이 되고 싶었다.
+사실 목적은 '경제적 자유'였다. 창업가로서 무언가를 창조해내고 싶었다. 기술이 없는 내가 해 볼 수 있는 건 다 해보고 싶었다. 그렇게 코딩을 배우기 시작했다.
 categories:
  - Retrospect
 tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, 회고]
@@ -33,7 +34,7 @@ tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, �
 
 ![](https://images.velog.io/images/6mini/post/88bdead0-3201-4c3d-bcf1-cd8f973d2aac/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202021-07-06%2011.54.54.png)
 
-	(무시무시한 글... 현재 운용 중인 유튜브 편집도 힘드려나 싶다.)
+> (무시무시한 글... 현재 운영 중인 유튜브 편집도 힘드려나 싶다.)
 
 ## 원격 학습 환경에서 잘 소통하는 방법
 
@@ -50,7 +51,9 @@ tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, �
 
 ## 참고 영상
 ### 메타인지
-!youtube[9vjJC7TwA3Y]
+
+[![내 안의 가능성을 끌어내는 메타인지의 비밀](https://img.youtube.com/vi/9vjJC7TwA3Y/0.jpg)](https://youtu.be/9vjJC7TwA3Y?t=0s) 
+
 - 메타인지(meta-cognition)
 	1. 자기 자신을 보는 거울
 	2. 스스로를 믿는 능력
@@ -60,7 +63,7 @@ tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, �
  - 완벽하지 않음을 부끄러워하지 말자.
  
 ### 몰입
-!youtube[ukjYwSiYT1I]
+[![내 안의 가능성을 끌어내는 메타인지의 비밀](https://img.youtube.com/vi/ukjYwSiYT1I/0.jpg)](https://youtu.be/ukjYwSiYT1I?t=0s) 
 - 몰입 : 주어진 도전에 대하여 최대로 응전하는 상태
 - 걱정하거나, 결과에 치중하면 몰입이 안된다.
 - 우리가 건드릴 수 있는 것은 오직 '과정' 뿐이다.
@@ -68,19 +71,20 @@ tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, �
 - 지적 재능은 후천적 : 몰입 학습
 
 ### 온라인 공부
-!youtube[oWriGCIgOmk]
+[![내 안의 가능성을 끌어내는 메타인지의 비밀](https://img.youtube.com/vi/oWriGCIgOmk/0.jpg)](https://youtu.be/oWriGCIgOmk?t=0s) 
 - 서서 듣는다.
 - 뇌에 재밌는 긍정적 착각을 준다.
 - 녹음기를 사용하는 것이 좋다.
 
 ### 작은 성취
-!youtube[whFZCmN__mM]
+[![내 안의 가능성을 끌어내는 메타인지의 비밀](https://img.youtube.com/vi/whFZCmN__mM/0.jpg)](https://youtu.be/whFZCmN__mM?t=0s) 
+
 - 세상을 바꾸고 싶다면, 이불 정리부터 시작하라.(사실 이건 옛날부터 좋아하는 명언이며, 현재까지 꾸준히 실행하고 있다.)
 - 성공 앞에서는 모두가 평범하다. 성공하려는 의지. 그 밖에 어떤 것도 중요하지 않다.
 - 희망의 힘. 한 사람의 힘. 한 목소리가 여러 목소리가 된다. 한 사람이 세상을 변화시킬 수 있다.
 
 ### 실패
-!youtube[ivJFx8INiWI]
+[![내 안의 가능성을 끌어내는 메타인지의 비밀](https://img.youtube.com/vi/ivJFx8INiWI/0.jpg)](https://youtu.be/ivJFx8INiWI?t=0s) 
 #### 멋있게 실패하는 5가지 방법
 1. 공개적으로 실패한다.
 2. 함께 실패한다.
@@ -89,7 +93,8 @@ tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, �
 5. 점진적으로 실패한다.
 
 ### 수업 태도
-!youtube[3i29jRcJP5I]
+[![내 안의 가능성을 끌어내는 메타인지의 비밀](https://img.youtube.com/vi/3i29jRcJP5I/0.jpg)](https://youtu.be/3i29jRcJP5I?t=0s) 
+
 #### 경청
 1. 아이컨택
 2. 미소
