@@ -1,1 +1,12 @@
 // Custom styles.
+.sidebar-nav .sidebar-nav-active {
+    color: white;
+    border-bottom-color: white;
+}
+.post-toc .nav .active>a {
+    color: white;
+    border-bottom-color: white;
+}
+.post-toc .nav .active-current>a {
+    color: white;
+}
