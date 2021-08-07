@@ -18,8 +18,11 @@
     </div>
       {% if site.seo %}
         <h1 class="site-subtitle" itemprop="description">{{ site.subtitle }}</h1>
+        
       {% else %}
-        <p class="site-subtitle">{{ site.subtitle }}</p>
+        <p class="site-subtitle">{{ site.subtitle }}
+        <a href="{{ page.url }}"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url={{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%23AAAAAA&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Hits&edge_flat=false" style="margin-top: 20px;"/></a>
+        </p>
       {% endif %}
   </div>
 
