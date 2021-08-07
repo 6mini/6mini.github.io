@@ -1,6 +1,6 @@
 ---
 title: '[Retrospect] AI Bootcamp 3주차 회고 : 초심'
-description: 코드스테이츠 AI Bootcamp Section1 Sprint2(Linear Algebra) 2주차 회고
+description: 코드스테이츠 AI Bootcamp Section1 Sprint3(Linear Algebra) 3주차 회고
 categories:
  - Retrospect
 tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, 회고]
