@@ -122,8 +122,8 @@ menu:
   about: /about/
   archives: /archives/
   tags: /tags/
-  #sitemap: /sitemap.xml
-  #commonweal: /404.html
+  # sitemap: /sitemap.xml
+  # commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -140,8 +140,8 @@ menu_icons:
   schedule: calendar
   tags: tags
   archives: archive
-  sitemap: sitemap
-  commonweal: heartbeat
+  # sitemap: sitemap
+  # commonweal: heartbeat
 
 
 
@@ -262,7 +262,7 @@ toc:
 sidebar:
   # Sidebar Position, available value: left | right
   # position: left
-  position: right
+  position: left
 
   # Sidebar Display, available value:
   #  - post    expand on posts automatically. Default.
