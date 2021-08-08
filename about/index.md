@@ -3,13 +3,10 @@ layout: page
 type: about
 ---
 
-<div align=center>
+<br>
 
-### Hi there!
-
+## Hi there!
 I’m currently learning AI engineering in CodeStates
 
-</div>
-
-- [Github](github.com/6mini)
+- [Github](https://github.com/6mini)
 
