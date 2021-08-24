@@ -1,5 +1,5 @@
 ---
-title: '[Retrospect] AI Bootcamp 6주차 회고 : 재미'
+title: '[Retrospect] AI Bootcamp 6주차 회고 : 흥미'
 description: 코드스테이츠 AI Bootcamp Section2 Sprint2(Tree Based Models) 6주차 회고
 categories:
  - Retrospect
