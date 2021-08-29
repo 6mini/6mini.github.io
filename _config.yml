@@ -385,7 +385,7 @@ han: false
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: 6mini-blog
   count: true
   # hide comments (visitors need to click to load the comments)
@@ -440,12 +440,12 @@ changyan:
 
 # Support for gitalk comments system.
 gitalk:
-  enable: false
-  clientID: # 54730ddf7b9420460c03
-  clientSecret: # c05684701b25ff1c19ea0c01ce4d80c125e0707d
-  repo: # colingpt.github.io
-  owner: # colingpt
-  admin: # colingpt
+  enable: true
+  clientID: f6359848446c5d3f4e86
+  clientSecret: 971efcceabad0dc928448dc0a7c4d6d48275f41a
+  repo: 6mini.github.io
+  owner: 6mini
+  admin: 6mini
 
 # Baidu Share
 # Available value:
