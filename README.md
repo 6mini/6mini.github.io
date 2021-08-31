@@ -15,3 +15,6 @@
 - Post Side Bar 숫자 삭제 및 접기 기능 삭제
 - 수식 기능 추가
 - 404 Page Custom
+
+### 21. 8.29.
+- Gitalk 댓글 기능 추가
