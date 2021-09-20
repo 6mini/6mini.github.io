@@ -1,6 +1,6 @@
 ---
-title: '[Retrospect] AI Bootcamp 8주차 회고 : 점검'
-description: 코드스테이츠 AI Bootcamp Section2(Machine Learning) 8주차 회고
+title: '[Retrospect] AI Bootcamp 9주차 회고 : 상승'
+description: 코드스테이츠 AI Bootcamp Section3 Sprint1(Env, RDB) 9주차 회고
 categories:
  - Retrospect
 tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, 회고]
