@@ -8,6 +8,8 @@ mathjax: enable
 # 0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟
 ---
 
+[Github Repository 바로가기](https://github.com/6mini/Naver_Movie_Scraper)
+
 # 1️⃣ Web Scraping
 - 네이버 영화 리뷰 스크래핑 함수 구현
 - TEST Movie : 샹치와 텐 링즈의 전설
