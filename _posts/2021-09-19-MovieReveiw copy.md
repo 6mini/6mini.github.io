@@ -1,5 +1,5 @@
 ---
-title: 'Beautifulsoup Naver Movie Reveiw Web Scraping and Exeport SQLite in Python'
+title: '[Beautifulsoup] Naver Movie Reveiw Web Scraping and Exeport SQLite in Python'
 description: 파이썬을 이용하여 네이버 영화에서 리뷰의 한줄평과 점수를 beautifulsoup로 스크래핑하여 리스트로 저장 및 평균 점수를 구하고 SQLite를 통해 DB를 저장하는 과정
 categories:
  - Did Unknown
