@@ -1,5 +1,5 @@
 ---
-title: 'Web Scraping'
+title: '[Python] Web Scraping'
 description: 파이썬을 통한 크롤링, Read HTML or CSS, DOM, requests와 beautifulsoup 라이브러리 사용
 categories:
  - Data Engineering
