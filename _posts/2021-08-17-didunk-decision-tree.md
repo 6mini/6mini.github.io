@@ -8,7 +8,7 @@ mathjax: enable
 # 0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟
 ---
 
-# 1️⃣ EDA
+# EDA
 
 ```py
 !pip install category_encoders # 카테고리 인코더스 설치
@@ -195,7 +195,7 @@ y_val = val[target]
 X_test = test[features]
 ```
 
-# 2️⃣ Modelling
+# Modelling
 
 ```py
 from category_encoders import OneHotEncoder
@@ -345,7 +345,7 @@ importances.sort_values().plot.barh();
 
 ![스크린샷 2021-08-17 22 49 47](https://user-images.githubusercontent.com/79494088/129737707-b2a6d835-3f8a-4946-a1c6-66389dfe0e8f.png)
 
-# 3️⃣ Kaggle Submit
+# Kaggle Submit
 
 ```py
 # 테스트 학습

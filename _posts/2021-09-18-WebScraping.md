@@ -8,16 +8,9 @@ mathjax: enable
 # 0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟
 ---
 
-# 1️⃣ Reference
 
-- [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- [Requests: HTTP for humans](https://requests.readthedocs.io/en/master/)
-- [Python’s Requests Library (Guide)](https://realpython.com/python-requests/)
-- [CSS: Cascading Style Sheets](https://developer.mozilla.org/ko/docs/Web/CSS)
-- [클래스 선택자](https://developer.mozilla.org/ko/docs/Web/CSS/Class_selectors)
-- [ID 선택자](https://developer.mozilla.org/ko/docs/Web/CSS/ID_selectors)
 
-# 2️⃣ HTML & CSS
+# HTML & CSS
 
 ## HTML
 - HTML : HyperText Markup Language : 웹에서 페이지를 표시할 때 사용
@@ -71,7 +64,7 @@ mathjax: enable
 }
 ```
 
-# 3️⃣ DOM
+# DOM
 - DOM(Document Object Model) : 문서 객체 모델
 - HTML, XML 등 문서의 프로그래밍 인터페이스
 - 문서를 하나의 구조화된 형식으로 표현하기 때문에 원하는 동작을 할 수 있다.
@@ -91,7 +84,7 @@ document.querySelectorAll('p')
 - `querySelector` : 셀렉터와 일치하는 요소를 리턴
 - `querySelectorAll` : 셀렉터와 일치하는 모든 요소를 리턴
 
-# 4️⃣ Web Scraping
+# Web Scraping
 - 크롤링과 유사하지만 크롤링은 자동화에 초점이 맞춰져 있다.
 - 스크래핑은 특정 정보를 가져오는 것이 목적이라면 크롤링은 인터넷 사이트를 인덱싱하는 목적을 둔다.
 
@@ -169,3 +162,12 @@ cat_el.text #=> 'This is a p-cat'
 
 cat_el.text.strip() # 불필요한 띄어쓰기 정리
 ```
+
+# Reference
+
+- [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+- [Requests: HTTP for humans](https://requests.readthedocs.io/en/master/)
+- [Python’s Requests Library (Guide)](https://realpython.com/python-requests/)
+- [CSS: Cascading Style Sheets](https://developer.mozilla.org/ko/docs/Web/CSS)
+- [클래스 선택자](https://developer.mozilla.org/ko/docs/Web/CSS/Class_selectors)
+- [ID 선택자](https://developer.mozilla.org/ko/docs/Web/CSS/ID_selectors)
