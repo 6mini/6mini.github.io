@@ -1,9 +1,9 @@
 ---
-title: '[Project] Data Pipeline 구축(Data Engineering)'
+title: '[DE Project] Data Pipeline 구축 1. 개요'
 description: 스포티파이 API 이용 데이터 파이프라인 구축 토이 프로젝트 아키텍쳐 및 과정
 categories:
- - Data Engineering
-tags: [Project]
+ - Project
+tags: [Project, Data Engineering, Data Pipeline]
 ---
 
 # 데이터 엔지니어링의 필요성
