@@ -1,5 +1,5 @@
 ---
-title: '[DE Project] Data Pipeline 구축 1. Spotify API'
+title: '[Data Pipeline Project 1] Spotify recommend 1. Spotify API'
 description: 스포티파이 API 이용 데이터 파이프라인 구축 토이 프로젝트 Architecture 및 과정
 categories:
  - Project
