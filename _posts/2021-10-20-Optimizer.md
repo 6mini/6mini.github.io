@@ -18,7 +18,7 @@ mathjax: enable
 
 # 종류
 
-![image](https://user-images.githubusercontent.com/79494088/137847104-fc73e10c-79a2-46ef-b00d-2fce4d5f4bae.png)
+![image](https://user-images.githubusercontent.com/79494088/138055737-708a5ea4-614e-4e1f-8d8f-9db242cc7c4a.png)
 
 ## SGD(Stochastic Gradient Descent)
 
