@@ -3,7 +3,7 @@ title: '[Deep Learning] Gradient Decent & Backpropagation'
 description: 경사하강법과 역전파에 대한 이해. Keras Framework 이용 Model 구축
 categories:
  - Deep Learning
-tags: [Deep Learning]
+tags: [Deep Learning, Gradient Decent, Backpropagation, Optimizer, Keras]
 mathjax: enable
 ---
 
