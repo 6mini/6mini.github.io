@@ -68,33 +68,31 @@ mathjax: enable
 ## 자연어 처리로 할 수 있는 일
 
 ### 자연어 이해(NLU, Natural Language Understanding)
-- 분류(Classification): 뉴스 기사 분류, 감성 분석(Positive/Negative) <br> 
-_Ex) "This movie is awesome!" -> **Positive or Negative?**_
-- 자연어 추론(NLI, Natural Langauge Inference) <br>
-_Ex) 전제: "A는 B에게 암살당했다", 가설: "A는 죽었다" -> True or False?_
-- 기계 독해(MRC, Machine Reading Comprehension), 질의 응답(QA, Question&Answering) <br>
-_Ex) 비문학 문제 풀기_
-- 품사 태깅(POS tagging), 개체명 인식(Named Entity Recognition) 등 <br>
-_Ex) [POS Tagging](https://excelsior-cjh.tistory.com/71)_<br>
-_Ex) [NER](https://stellarway.tistory.com/29)_
+- 분류: 뉴스 기사 분류, 감정 분석
+- 자연어 추론(NLI, Natural Langauge Inference)
+    - ex) A는 B에게 암살당했다 -> A는 죽었다 -> T or F
+- 기계 독해(MRC, Machine Reading Comprehension), 질의 응답(QA, Question&Answering)
+- 품사 태깅(POS tagging), 개체명 인식(Named Entity Recognition) 등
+    - [POS Tagging](https://excelsior-cjh.tistory.com/71)
+    - [NER](https://stellarway.tistory.com/29)
 
-### 자연어 생성(NLG, Natural Language Generation)**
-- 텍스트 생성(특정 도메인의 텍스트 생성)<br>
-_Ex) 뉴스 기사 생성, 가사 생성_
+### 자연어 생성(NLG, Natural Language Generation)
+- 텍스트 생성
+    ex) 뉴스 기사 생성, 가사 생성
 
-### **NLU & NLG**
+### NLU & NLG
 - 기계 번역(Machine Translation)
 - 요약(Summerization)
-    - 추출 요약(Extractive summerization): 문서 내에서 해당 문서를 가장 잘 요약하는 부분을 찾아내는 Task => (NLU에 가까움)
-    - 생성 요약(Absractive summerization): 해당 문서를 요약하는 요약문을 생성 => (NLG에 가까움)
+    - 추출 요약(Extractive summerization): 문서 내에서 해당 문서를 가장 잘 요약하는 부분을 찾아내는 Task -> NLU에 가깝다.
+    - 생성 요약(Absractive summerization): 해당 문서를 요약하는 요약문 생성 -> NLG에 가깝다.
 - 챗봇(Chatbot)
-    - 특정 태스크를 처리하기 위한 챗봇(Task Oriented Dialog, TOD)<br/>
-    _Ex) 식당 예약을 위한 챗봇, 상담 응대를 위한 챗봇_
-    - 정해지지 않은 주제를 다루는 일반대화 챗봇(Open Domain Dialog, ODD)<br/>
+    - 특정 테스크를 처리하기 위한 챗봇(Task Oriented Dialog, TOD)
+        - ex) 식당 예약을 위한 챗봇, 상담 응대를 위한 챗봇
+    - 정해지지 않은 주제를 다루는 일반 대화 챗봇(Open Domain Dialog, ODD)
 
-### **기타**
-- TTS(Text to Speech): 텍스트를 음성으로 읽기 (_Ex) 유튜브 슈퍼챗_)
-- STT(Speech to Text): 음성을 텍스트로 쓰기 (_Ex) 컨퍼런스, 강연 등에서 청각 장애인을 위한 실시간 자막 서비스 제공_)
+### 기타
+- TTS(Text to Speech): 텍스트를 음성으로 읽기(ex) 슈퍼챗)
+- STT(Speech to Text): 음성을 텍스트로 쓰기(ex) 컨퍼런스, 강연 등에서 청각 장애인을 위한 실시간 자막 서비스)
 - Image Captioning: 이미지를 설명하는 문장 생성
 
 ## 사례
