@@ -3,7 +3,7 @@ title: '[Deep Learning] Distributed Representation'
 description: 단어의 분산 표현(원핫인코딩의 단점, 분포 기반의 표현, 임베딩), Word2Vec(CBoW, Skip-gram 차이), fastText(OOV문제, 철자 단위 임베딩 방법의 장점)
 categories:
  - Deep Learning
-tags: [Deep Learning, ]
+tags: [Deep Learning, 원핫인코딩, Embedding, 임베딩, Word2Vec, CBoW, Skip-gram, fastText, OOV, 철자 단위 임베딩]
 mathjax: enable
 ---
 
@@ -632,6 +632,19 @@ model.evaluate(X_test, y_test)
 - Word2Vec의 단점은?
 - OOV 문제란?
 - 철자(Character) 단위 임베딩 방법의 장점은?
+
+## 분포 가설(Distributed Hypothesis)
+- 비슷한 위치에서 등장하는 단어는 비슷한 의미를 가진다.
+## Word2Vec
+- 원핫인코딩은 단어 간 유사도를 계산을 할 수 없다는 단점이 있는데, 유사도를 반영할 수 있도록 단어의 의미를 벡터화 하는 방법이다.
+- 주변에 있는 단어로 중간에 있는 단어를 예측하는 CBoW와 중간에 있는 단어로 주변에 있는 단어를 예측하는 Skip-Gram 방식이 있다.
+- 모르는 단어(OOV)는 분석할 수 없다.
+## fastText
+- Word2Vec은 단어를 쪼갤 수 없는 단위로 생각한다면, festText는 하나의 단어 안에도 여러 단어가 존재하는 것으로 간주한다.
+- 글자 단위의 n-gram의 구성으로 취급하며, n의 수에 따라 단어가 얼마나 분리되는지 결정된다.
+- 모르는 단어(OOV)도 분석할 수 있다.
+## GloVe
+- 임베딩된 두 단어벡터의 내적이 말뭉치 전체에서의 동시 등장확률 로그값이 되도록 목적함수를 정의하여 임베딩 된 단어벡터 간 유사도 측정을 수월하게 하면서도 말뭉치 전체의 통계정보를 반영하기위해 나온 방법이다.
 
 # References
 - [n-gram](https://www.youtube.com/watch?v=4f9XC8HHluE)
