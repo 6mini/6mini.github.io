@@ -1091,6 +1091,115 @@ showarray(best_image_for_label(l, 'tabby'))
 
 ![image](https://user-images.githubusercontent.com/79494088/139779633-2da15380-0488-4d4b-835a-20f9edf1d41c.png)
 
+# Review
+## Semantic Segmentation
+
+### 컴퓨터 비전에서 가장 많이 다뤄지는 문제들
+
+![image](https://user-images.githubusercontent.com/79494088/139795191-32b5cd7c-a474-4fbf-acba-8e925b25d716.png)
+
+#### Classification (분류)
+- 인풋에 대해서 하나의 레이블을 예측하는 작업이다.
+- AlexNet, ResNet, Xception 등의 모델이 있다.
+
+#### Localization/Detection (발견)
+- 물체의 레이블을 예측하면서 그 물체가 어디에 있는지 정보를 제공한다.
+- 물체가 있는 곳에 네모를 그린다.
+- YOLO, R-CNN 등의 모델이 있다.
+
+#### Segmentation (분할)
+- 모든 픽셀의 레이블을 예측한다.
+- FCN, SegNet, DeepLab 등의 모델이 있다.
+
+### Semantic Segmentation 이란?
+
+![image](https://user-images.githubusercontent.com/79494088/139794894-e7cc8007-e1df-4a87-af69-ebf0c6574f15.png)
+
+- 컴퓨터 비젼 분야에서 가장 핵심적인 분야 중 하나다.
+- 단순히 사진을 보고 분류하는 것에 그치지 않고 그 장면을 완벽하게 이해해야 하는 높은 수준의 문제이다.
+- 사진에 있는 모든 픽셀을 해당하는 class로 분류하는 것이다.
+- 이미지으 모든 픽셀에 대한 예측을 하는 것이기 때문에 dense prediction이라고도 불린다.
+- 같은 class의 instance를 구별하지 않는다.
+
+#### Semantic Segmentation Task
+
+![image](https://user-images.githubusercontent.com/79494088/139795501-4af203c8-f86a-4651-b6be-55a6ee8c949d.png)
+
+##### Input
+RGB color 이미지 (height X width X 3) 또는 흑백 (height X width X 1) 이미지
+##### Output
+각 필셀별 어느 class 에 속하는지 나타내는 레이블을 나타낸 Segmentation Map
+
+### 다운샘플링(Down-sampling)과 업샘플링(Up-sampling)
+- AlexNet, VGG 등 분류에 자주 쓰이는 깊은 신경망은 Semantic Segmentation을 하는데 적합하지 않다.
+- 이런 모델은 parameter의 개수와 차원을 줄이는 layer를 가지고 있어서 자세한 위치 정보를 잃게 된다.
+- 만약 공간에 대한 정보를 잃지 않기 위해 pooling과 fully conn layer를 없애고 striderk 1이고 padding도 일정한 convolution을 진행할 수도 있을 것이다.
+- 인풋의 차원은 보존하겠지만 parameter의 개수가 많아져서 메모리 문제나 계산 비용이 너무 많이 들어서 현실적으로 불가능할 것이다.
+- 이 문제의 중간점을 찾기 위해 보통 Semantic Segmentation 모델은 보통 Downsampling & Upsampling의 형태를 갖고 있다.
+
+![image](https://user-images.githubusercontent.com/79494088/139795853-9b07a437-65ef-47a6-8533-77348ca6d530.png)
+
+- Downsampling 하는 부분을 인코더, Upsampling 하는 과정을 디코더이라고 부른다.
+
+#### Downsampling
+- 주 목적은 차원을 줄여서 적은 메모리로 깊은 Convolution 을 할 수 있게 하는 것이다.
+- 보통 stride 를 2 이상으로 하는 Convolution 을 사용하거나, pooling을 사용한다.
+- 이 과정을 진행하면 어쩔 수 없이 feature 의 정보를 잃게된다.
+- 마지막에 Fully-Connected Layer를 넣지 않고, Fully Connected Network 를 주로 사용한다.
+- FCN 모델에서 위와같은 방법을 제시한 후 이후에 나온 대부분의 모델들에서 사용하는 방법이다.
+
+#### Upsampling
+- Downsampling 을 통해서 받은 결과의 차원을 늘려서 인풋과 같은 차원으로 만들어 주는 과정이다.
+- 주로 Strided Transpose Convolution 을 사용한다.
+
+### Semantic Segmentation 과 Instance Segmentation 의 차이
+
+![image](https://user-images.githubusercontent.com/79494088/139796268-25428d25-f81c-44b3-94ed-0836fc3ebdca.png)
+
+- Segmentation은 크게 Semantic segmentation과 Instance segmentation로 나눌 수 있다.
+- Semantic segmenation은 이미지 내에서 객체가 속한 Class가 무엇인지에 대해서만 판단한다는 특징이 있다.
+- 반면 Instance segmentation은 객체의 Class와 더불어 그 안의 Instance들 간의 구분이 가능하게 해준다.
+- 기술적 측면에서는 Instance 방식이 한 단계 더 고차원적이라고 볼 수 있지만, Semantic 방식에 비해 더 많은 계산 비용이 들어간다는 단점이 있다.
+- 따라서 class 안의 Instance 분류가 중요하지 않은 실질적인 상황들을 고려해 볼 때 Semantic 방식이 더 효율적인 경우가 많다.
+
+## 이미지 데이터 증강(Image Data Augmentation)
+
+### 데이터 증강의 효과
+
+![image](https://user-images.githubusercontent.com/79494088/139796767-fbfd0b72-c15b-4bbf-afaa-27949c8431d8.png)
+
+- 이것은 원본 이미지에 인위적인 변화를 주는 것이다.
+- 그리고 인위적으로 변화를 준 이미지는 충분히 학습에 활용될 수 있는 데이터가 된다.
+
+### 이미지 데이터를 증강하는 방법
+
+#### Pixel-Level Transforms
+
+![image](https://user-images.githubusercontent.com/79494088/139796878-d164b085-4347-4667-9663-91faf1795a03.png)
+
+- Pixel 단위로 변환을 시키는 Pixel-Level Transform은 대표적으로 Blur, Jitter, Noise 등을 이미지에 적용하는 기법이다.
+- Gaussian Blur, Motion Blur, Brightness Jitter, Contrast Jitter, Saturation Jitter, ISO Noise, JPEG Compression 등 다양한 기법이 사용된다.
+
+#### Spatial-Level Transforms
+
+![image](https://user-images.githubusercontent.com/79494088/139796954-5c48e84c-4c23-4d32-bd31-9a7e59a6b7bb.png)
+
+- Image 자체를 변화시키는 Spatial-Level Transform이다.
+- 대표적으로 Flip과 Rotation이 있으며, Image의 일부 영역을 잘라내는 Crop도 많이 사용된다.
+- 이 Augmentation을 사용할 때 주의해야할 점은 Detection (Bounding Box), Segmentation (Mask) Task의 경우 Image에 적용한 Transform을 GT에도 동일하게 적용을 해줘야 하고, Classification의 경우 적용하였을 때 Class 가 바뀔 수 있음을 고려하여 적용해야 한다. 
+
+## 객체 인식(Object Detection, Object Recognition)
+- Object Detection(객체 감지)란 컴퓨터 비전의 하위 분야 중 하나로 전체 디지털 이미지 및 비디오 내에서 유의미한 특정 객체를 감지하는 작업을 한다.
+- 이러한 object detection은 Image retrieval(이미지 검색), Image annotation(이미지 주석), Face detection(얼굴 인식), Video Tracking(비디오 추적) 등 다양한 분야의 문제를 해결하기 위해 사용된다.
+- 자율 주행 자동차에서, 차량 주변에 있는 비디오를 인식하여 자동으로 비디오 이미지 내에 차량이 있는지 혹은 사람이 있는지 등을 분석하여 주변 객체들에 대한 위치, 이동 정보를 주는 것(video tracking)
+- 휴대폰 보정 카메라 어플에서 얼굴을 감지하여 해당 부분의 이미지 보정을 적용하는 것(face detection)
+- 포털 사이트의 이미지 검색을 이용할 때, 사진을 업로드하면 해당 사진 내에 존재하는 객체들을 자동으로 인식하여 이와 비슷한 유형의 이미지를 찾아주는 것(image annotation & retrieval) 등이 object detection을 통해 이루어지는 작업이다.
+
 # Reference
 - [텐서플로우 이미지 분할](https://www.tensorflow.org/tutorials/images/segmentation)
 - [github frcnn-from-scratch-with-keras](https://github.com/kentaroy47/frcnn-from-scratch-with-keras)
+- [1편: Semantic Segmentation 첫걸음!](https://medium.com/hyunjulie/1%ED%8E%B8-semantic-segmentation-%EC%B2%AB%EA%B1%B8%EC%9D%8C-4180367ec9cb)
+- [인공지능의 이미지 분류 방식](https://www.datamaker.io/posts/17/)
+- [Image Data Augmentation Overview](https://hoya012.github.io/blog/Image-Data-Augmentation-Overview/)
+- [[DeepLearning] Image Augmentation](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=4u_olion&logNo=221437862590)
+- [Object Detection](https://www.secmem.org/blog/2021/06/20/Object_Detection/)
