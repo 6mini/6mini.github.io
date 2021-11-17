@@ -217,8 +217,9 @@ social:
   GitHub: https://github.com/6mini
   Instagram: https://www.instagram.com/6mini/
   # Facebook: https://www.facebook.com/profile.php?id=100066812041393
-  SIXTEST: http://www.sixtest.site/
-  CO-THER19: https://cother.herokuapp.com/
+  SixTest: http://www.sixtest.site/
+  Co-Ther19: https://cother.herokuapp.com/
+  FASI: https://fasi.herokuapp.com/
 
 # Social Links Icons
 # Icon Mapping:
@@ -232,8 +233,9 @@ social_icons:
   GitHub: github
   # Facebook: facebook-square
   Instagram: instagram
-  Sixtest: link
-  CO-THER19: link
+  SixTest: search
+  Co-Ther19: certificate
+  FASI: male
   # Twitter: twitter
   # Weibo: weibo
 
