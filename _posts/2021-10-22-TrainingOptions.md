@@ -7,10 +7,8 @@ tags: [Deep Learning, Regularization, Loss Function, 규제방법]
 mathjax: enable
 ---
 
-# Warm-Up
-
 ## Review
-- 신경망의 동작원리 (Note1)
+- 신경망의 동작원리
   * 데이터 전처리 및 입력
   * 모델 제작 및 가중치 초기화
   * 모델에 데이터를 넣고 출력값을 얻음

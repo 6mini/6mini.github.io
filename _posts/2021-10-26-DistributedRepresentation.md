@@ -7,7 +7,6 @@ tags: [Deep Learning, 원핫인코딩, Embedding, 임베딩, Word2Vec, CBoW, Ski
 mathjax: enable
 ---
 
-# Warm Up
 - 분포 표현(Distributed Representation): 단어 분포를 중심으로 단어를 벡터화한다.
 - 대표적 방법 중 하나는 Word2Vec(워드투벡터)이다.
 - [[딥러닝 자연어처리]Word2Vec](https://youtu.be/sY4YyacSsLc)

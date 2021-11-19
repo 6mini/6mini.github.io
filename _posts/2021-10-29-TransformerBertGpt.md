@@ -7,7 +7,6 @@ tags: [Deep Learning]
 mathjax: enable
 ---
 
-# Warm Up
 - [Transformer](https://www.youtube.com/watch?v=mxGCEWOxfe8)
 
 # Transformer: Attention is All You Need

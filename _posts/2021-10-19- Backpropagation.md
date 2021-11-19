@@ -7,8 +7,6 @@ tags: [Deep Learning, Gradient Decent, Backpropagation, Optimizer, Keras]
 mathjax: enable
 ---
 
-# Warm Up
-
 - [역전파 미적분](https://www.youtube.com/watch?v=tIeHLnjs5U8&t)
 
 ![image](https://user-images.githubusercontent.com/79494088/137821712-4d434be7-aad5-4f71-a277-061f4a89fab3.png)

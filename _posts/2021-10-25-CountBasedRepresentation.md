@@ -7,8 +7,6 @@ tags: [Deep Learning, NLP, SpaCy, 불용어, Stop words, 어간 추출, 표제�
 mathjax: enable
 ---
 
-# Warm up
-
 ## 자연어 처리 용어
 - Corpus(말뭉치): 특정한 목적을 가지고 수집한 텍스트 데이터
 - Document(문서): Sentence(문장)의 집합

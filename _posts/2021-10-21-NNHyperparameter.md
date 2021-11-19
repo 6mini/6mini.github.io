@@ -7,8 +7,6 @@ tags: [Deep Learning, Hyperparameter, Grid Search, Random Search]
 mathjax: enable
 ---
 
-# Warm Up
-
 - [Hyperparameter Tuning Guide](https://www.youtube.com/watch?v=-i8b-srMhGM)
   - 딥러닝 홀로서기
 - [Gradient Descent With Momentum](https://youtu.be/yWQZcdJ4k8s?t=34)
