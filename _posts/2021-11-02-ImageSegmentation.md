@@ -7,7 +7,6 @@ tags: [Deep Learning, Image Segmentation, Image Augmentation, 증강, Object Rec
 mathjax: enable
 ---
 
-# Warm Up
 - [Lecture 11 Detection and Segmentation](https://youtu.be/nDPWywWRIRo)
 - [Unet 튜토리얼](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)
 

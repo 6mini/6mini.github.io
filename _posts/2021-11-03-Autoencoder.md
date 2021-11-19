@@ -7,7 +7,6 @@ tags: [Deep Learning, Autoencoder, AE, Latent variable, information retrieval pr
 mathjax: enable
 ---
 
-# Warm Up
 - [AE 소개영상 1](https://youtu.be/YxtzQbe2UaE)
 - [AE 소개영상 2](https://youtu.be/54hyK1J4wTc?t=889)
 - [AE 소개영상 3(영어)](https://youtu.be/3jmcHZq3A5s?t=93)
