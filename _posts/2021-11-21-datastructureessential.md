@@ -1,0 +1,98 @@
+---
+title: '[Computer Science] DataStructure Essential(자료구조 본질)'
+description: 데이터를 활용하는 입장과 컴퓨터 내부동작, 알고리즘 효율성에 대한 내용인 자료구조의 Big O 및 복잡도 개념
+categories:
+ - Computer Science
+tags: [Computer Science, Big O]
+mathjax: enable
+---
+
+- 키워드: 참조와 할당, 성능, 빅오표기법(시간복잡도, 공간복잡도)
+- [데이터직군에서 "무조건" 알고리즘 공부를 해야할까?](https://youtu.be/9TyyMtlk5i4)
+- [프로그래밍에서 알고리즘이 도대체 왜!? 중요할까?](https://youtu.be/i3MqN7yBik0)
+
+# 자료구조의 배경
+- 프로그래밍이 생겨난 배경: 컴퓨터로 인간의 행동을 편하게 하기 위함이다.
+- 자료구조는 컴퓨터 과학에 있어 전체적인 관점의 기초공사 개념이다.
+- 자료구조의 시작: 대용량의 다양한 데이터를 효율적으로 처리하기 위해 자료구조라는 개념이 개발되었다.
+- 효율적인 처리
+  - 자동화
+  - 빠른 계산
+  - 반복 내용 처리
+  - 여러 값을 한 번에 처리
+  - 값이 빠르게 변경되는 경우에 대한 처리
+  - 특정 변수에 대한 처리
+  - 특정 값을 다양한 형태로 보기를 원하는 경우
+  - 조건에 따른 처리
+
+```py
+# 특정 두 수의 합과 같은 인덱스값을 찾자.
+def twonumbersum(numbers, result):
+  for i in range(len(numbers)):
+    for j in range(i+1, len(numbers)):
+      if numbers[i] + numbers[j] == result:
+        return [i,j]
+
+# 리스트값을 받기 위한 코드: 리스트 컴프리헨션 & 리스트 메소드(split) 활용
+# input 예시: 10,5,7
+numbers = [int(numbers) for numbers in input("리스트값을 입력하세요 : ").split(',')]
+# input 예시: 17
+result = int(input("두 수의 합을 입력하세요 : "))
+
+print("인덱스값 : ", twonumbersum(numbers,result))
+'''
+리스트값을 입력하세요 : 10,5,7
+두 수의 합을 입력하세요 : 17
+인덱스값 :  [0, 2]
+'''
+```
+
+## 자료구조의 다양한 활용
+- 자료구조를 체계적으로 정립하기 위해 프로그래밍 언어별로 다양한 자료형이 생겨났고, 파이썬에서는 리스트와 튜플을 통해 자료구조의 기본인 배열을 구현할 수 있게 되었다.
+
+### 배열
+- 컴퓨터 과학에 사용되는 기본적 용어
+- 하나의 변수에 여러개의 인덱스로 묶는 것이다.
+- 파이썬에서는 배열을 리스트와 튜플로 구현하고 활용한다.
+
+![image](https://user-images.githubusercontent.com/79494088/142800582-57363373-7103-495d-8e51-63b27d43439d.png)
+
+### 리스트
+- 파이썬은 리스트 자료형이 자료구조의 연결리스트로 기능을 지원한다.
+- 리스트는 임의의 메모리(위치)에 자료를 동적으로 처리할 수 있다.
+- 파이썬의 리스트는 자료구조의 배열과 연결리스트의 특징을 모두 갖고 있다.
+  - 배열의 특징: 인덱스 사용하여 노드에 접근 가능하다.
+  - 연결리스트의 특징: 인덱스 크기를 자유롭게 확장 가능하고 서로 다른 자료형을 노드로 가질 수 있다.
+
+- 자료구조의 기본적인 의미: 자료를 쉽게 관리하기 위해 다양한 구조로 묶는 것이다.
+
+![image](https://user-images.githubusercontent.com/79494088/142801080-d5fdd16c-6bb2-4ca6-b47f-1985ce7d8d58.png)
+
+# 자료구조와 효율성
+
+## Big O 표기법(notation)
+- 알고리즘 실행 효율성에 대해 측정할 방법이 필요하다.
+- **빅오 표기법은 불필요한 연산을 제거하여 알고리즘분석을 쉽게 할 목적으로 사용된다.**
+- 빅오표기법(Big O)을 활용하여 알고리즘 효율을 확인할 수 있다.
+- 빅오표기법은 해당 코드가 얼마나 수행되었는지(결과값을 출력하기 위한 연산을 얼마나 반복하였는지)에 따라 효율성을 확인한다.
+- 빅오표기법은 데이터 입력값 크기에 따라 알고리즘 실행 속도의 변화를 설명하는 방법이다.
+- 알고리즘 계산 복잡도 종류
+  - 시간 복잡도: 알고리즘을 활용해 얼마나 실행시간이 걸렸는지.
+  - 공간 복잡도: 문제 해결을 위해 얼마만큼 메모리 저장 공간이 필요한지.
+    - 하드웨어의 성능이 증가하면서 공간 복잡도보다, 소프트웨어의 성능인 시간 복잡도가 더 중요하다.
+- 빅오표기법은 입력값 증가에 중점을 두고 대비하여 실행시간이 얼마나 길어지는지 설명한다.
+  - 빅오표기법만으로 성능을 예측할 수는 없다.
+
+![image](https://user-images.githubusercontent.com/79494088/142883680-176b82ab-6aea-4f99-9454-08d5bcd84050.png)
+
+![image](https://user-images.githubusercontent.com/79494088/142883795-6d7157d0-636a-496f-8d3c-9e78e62330c4.png)
+
+![image](https://user-images.githubusercontent.com/79494088/142883884-6b4176d3-f74a-489a-a1b3-0e845f5bd93a.png)
+
+[알고리즘의 시간 복잡도와 Big-O 쉽게 이해하기](https://blog.chulgil.me/algorithm/)
+
+# Reference
+- [A Data Scientist’s Guide to Data Structures & Algorithms, Part 1](https://towardsdatascience.com/a-data-scientists-guide-to-data-structures-algorithms-1176395015a0)
+- [Algorithms, Data Structures, and Data Science](https://towardsdatascience.com/algorithms-data-structures-and-data-science-8d7a4e62758e)
+- [How important is Data Structures and Algorithm knowledge important for Data Scientist?](https://www.kaggle.com/questions-and-answers/63523)
+- [알고리즘의 시간 복잡도와 Big-O 쉽게 이해하기](https://blog.chulgil.me/algorithm/)
