@@ -1179,15 +1179,20 @@ Doesn't get easier than this. Good products shipped to my office free, in two da
 ```
 
 # Review
+
 ## 불용어(Stopwords)
 - 자주 등장하지만 분석을 함에 있어서 크게 도움되지 않는 단어이다.
 - NLTK에서 100여개 이상의 영어 단어를 불용어로 패키지 내에서 미리 정의하고 있다.
+
 ## 어간 추출(Stemming)과 표제어 추출(Lemmatization)
+
 ### 어간 추출
 - 단어의 의미가 포함된 부분으로 접사 등이 제거된 형태로써, 사전에 존재하지 않는 단어일 수 있다.
+
 ### 표제어 추출
 - 단어의 기본 사전형 단어 형태인 Lemma(표제어)로 변환된다.
 - Stemming보다 많은 연산이 필요하다.
+
 ## TF-IDF
 
 $$ idf(d, t) = log(\frac{n}{1+df(t)}) $$
