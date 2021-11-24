@@ -1,5 +1,5 @@
 ---
-title: '[Computer Science] DataStructure ADT, Linked List, Queue, Stack'
+title: '[Computer Science] ADT, Linked List, Queue, Stack'
 description: 자료구조와 알고리즘 반복학습, 자료구조의 코어가 되는 추상자료형(ADT)과 연결리스트, 큐, 스택의 파이썬 코드 구현
 categories:
  - Computer Science
