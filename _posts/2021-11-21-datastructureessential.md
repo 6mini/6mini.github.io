@@ -89,7 +89,6 @@ print("인덱스값 : ", twonumbersum(numbers,result))
 
 ![image](https://user-images.githubusercontent.com/79494088/142883884-6b4176d3-f74a-489a-a1b3-0e845f5bd93a.png)
 
-[알고리즘의 시간 복잡도와 Big-O 쉽게 이해하기](https://blog.chulgil.me/algorithm/)
 
 # Reference
 - [A Data Scientist’s Guide to Data Structures & Algorithms, Part 1](https://towardsdatascience.com/a-data-scientists-guide-to-data-structures-algorithms-1176395015a0)
