@@ -1,0 +1,254 @@
+---
+title: '[Computer Science] Algorithm: Search, Sort'
+description: 알고리즘 개념 적용, 알고리즘의 기본정렬(삽입/선택/거품정렬), 선형/이진검색
+categories:
+ - Computer Science
+tags: [Computer Science, DataStructure, Algorithm, 알고리즘, Insertion Sort, Selection Sort, Bubble Sort, Binary Search, Linear Search]
+mathjax: enable
+---
+
+- 키워드: 교환개념, 정렬
+- [알고리즘에 대해서](https://youtu.be/HOANXJDcB90)
+- [정렬 알고리즘이 중요한 이유](https://youtu.be/nqNPYD3wo-4)
+- [버블소트 거품정렬 5분만에 이해하기](https://youtu.be/RCnyz-Bfkmc)
+
+# 자동화
+
+## 다양성
+- 정렬: 반복하여 조건에 맞게 순서를 맞춰주는 작업이다.
+    - 정렬을 구성하는 논리적인 개념은 모든 알고리즘의 기반이 된다.
+- 구구단으로 치면 자료구조는 숫자이고, 알고리즘은 곱셈이다.
+- 즉, 자료구조는 기반이 되는 개념이고, 알고리즘은 방법이다.
+- 문제를 해결하는데 있어 다양한 방법이 존재하지만, 가능하면 빠른 알고리즘을 사용하는 이유는 속도 때문이다.
+
+## 교환
+
+```py
+# 첫번째 방법
+a = 3
+b = 1
+
+temp = a
+a = b
+b = temp
+
+print(a,b)
+
+
+# 두번째 방법
+a = 3
+b = 1
+
+a, b = b, a # 파이썬에서는 한 줄로 변경가능
+
+print(a,b)
+```
+
+# Search Algorithm
+
+## Linear Search
+- 선형 검색은 기본적인 검색 알고리즘으로 한 번에 하나씩 모두 검색하는 것이다.
+- 반복문을 활용해 배열의 변수만큼 검색을 진행한다.
+
+![image](https://user-images.githubusercontent.com/79494088/143543511-02bbded2-9f1b-407a-8884-c0a0c9d0bd07.png)
+
+```py
+def linear_search(linear_arr, search_number):
+    for i in range(len(linear_arr)):
+      if linear_arr[i] == search_number:
+        return i
+```
+
+## Binary Search
+- 반복을 통해 숫자를 반으로 줄이면서 검색을 진행하기 때문에 선형보다 속도가 더 빠르다.
+- 이진 검색방법은 데이터가 이미 정렬된 경우에만 작용한다.
+- 리스트를 처음 얻을 때 두 개의 다른 리스트(참조요소)를 설정해야한다.
+    - low는 리스트의 첫 번째 항목을 가리킨다.
+    - high는 리스트 목록의 마지막 항목을 가리킨다.
+
+```py
+def binary_search(test_list, search_item):
+
+     low = 0
+     high = len(test_list) - 1
+
+     while low <= high:
+         middle = (low + high) // 2   # middle을 지정해서 검색속도를 빠르게 한다.
+         guess = test_list[middle]
+
+         if guess == search_item:
+             return middle
+         if guess > search_item:
+             high = middle - 1
+         else:
+             low = middle + 1
+     return None
+
+test_list = [6,12,17,23,38,45,77,84]   # 이미 정렬된 리스트에서 검색 진행
+print('binary_search',binary_search(test_list, 12))
+```
+
+<img width="711" alt="binarySearch1" src="https://user-images.githubusercontent.com/79494088/143544654-d90045da-ef50-4ac6-9489-0332c318316b.png">
+
+<img width="705" alt="binarySearch2" src="https://user-images.githubusercontent.com/79494088/143544714-5d45335c-bde7-440f-825a-d2f6749f19a0.png">
+
+<img width="697" alt="binarySearch3-2" src="https://user-images.githubusercontent.com/79494088/143544836-79a8c331-6a0e-4d6e-ac15-56b3d5f153ae.png">
+
+- 알고리즘을 활용하는데 있어 기본적으로 상수계산부터 시작된다.
+- 상수계산은 쉽지만 복잡한 계산을 하기에 반복을 많이 해야하므로 시간과 메모리를 많이 소비한다.
+    - 때문에 반복문과 조건문, 연산자 등을 활용하여 효율적 알고리즘이 생성된다.
+- 이진검색도 정렬된 선형의 숫자들 중 특정 숫자를 효율적으로 검색하기 위해 나온 방법이다.
+    - 즉, 모든 알고리즘의 기본 원리는 숫자와 조건을 활용하면서 발전시킨다고 생각하면, 어려운 알고리즘에 대해 배우는 관점이 달라질 수 있다.
+
+# Iterative Sorting(반복 정렬)
+
+## Selection Sort(선택 정렬)
+
+Index	|Value
+0	|모든 값 중에서 가장 작은 값
+1	|첫번째 값(Index=0)을 제외하고 남은 값 중에서 가장 작은 값
+…	|…
+i	|i번째 부터 n-1 번째까지 값 중 가장 작은 값
+…	|…
+n-2	|n-2번째와 n-1 번째까지 값 중 가장 작은 값
+n-1	|마지막에 남은 하나의 값 (비교 대상 없음)
+
+- 크기 n의 배열이 주어졌을 때, index 0부터 n-1까지의 모든 index i에 놓으면 정렬된 배열을 얻을 수 있다.
+- 모든 index에 대해 그 index에 위치시킬 값을 선택하기 때문에 선택 정렬이라 부른다.
+
+### 복잡도 분석
+- 별도의 추가 공간을 사용하지 않고 주어진 배열이 차지하고 있는 공간 내에서 값들의 위치만 바뀌기 때문에 O(1)의 공간 복잡도를 가진다.
+- 시간 복잡도는 우선 루프문을 통해 모든 인덱스에 접근해야하기 때문에 기본적으로 O(N)을 소모한다.
+- 하나의 루프에서는 현재 인덱스의 값과 다른 인덱스의 값들과 비교하여 최소값을 찾은 후 현재 인덱스에 있는 값과 swap해야하기 때문에 O(N)이 필요하다.
+- 따라서 선택 정렬은 총 O(N^2)의 시간 복잡도를 가진다.
+
+### 특징
+- 정렬된 값을 배열의 맨 앞부터 하나씩 채워나간다.
+- 따라서, 뒤에 있는 index로 갈수록 비교 범위가 하나씩 점점 줄어드는 특성을 가졌다.
+- 입력 배열이 이미 정렬되어 있건 말건 관계없이 동일한 연산량을 갖고 있기 때문에 최적화 여지가 다른 O(N^2)과 대비해도 성능이 떨어지는 편이다.
+
+### 파이썬 소스코드 구현
+
+```py
+def selection_sort(arr):
+    for i in range(len(arr) - 1):
+        min_idx = i
+        for j in range(i + 1, len(arr)):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+```
+
+## Bubble Sort(거품 정렬)
+- 뒤에서부터 앞으로 정렬을 해나가는 구조를 가졌다.
+- 맨 뒷자리에 제일 큰 값을 제일 뒤로 보내고, 제일 큰 값 바로 앞에 두번째로 큰 값을 보낸다.
+- 이를 위해 배열 내의 값들을 앞뒤로 서로 비교해서 자리를 바꾸는 작업을 지속적으로 수행해야한다.
+- 이렇게 큰 값을 계속해서 뒤로 보내는 모습이 마치 방울이 이동하는 것과 같이 보여서 거품 정렬이라는 이름이 붙여졌다.
+
+### 복잡도 분석
+- 별도의 추가 공간을 사용하지 않고 주어진 배열이 차지하고 있는 공간 내에서 값들의 위치만 바꾸기 때문에 O(1)의 공간 복잡도를 가진다.
+- 시간 복잡도는 우선 루프문을 통해 맨 뒤부터 맨 앞까지 모든 인덱스에 접근해야 하기 때문에 기본적으로 O(N)을 소모한다.
+- 하나의 루프에서는 인접한 값들의 대소 비교 및 자리 교대를 위해 O(N)이 필요하게 된다.
+- 따라서 거품 정렬은 총 O(N^2)의 시간 복잡도를 가지는 정렬 알고리즘이다.
+- 하지만, 거품 정렬은 부분적으로 정렬되어 있는 배열에 대해서는 최적화를 통해 성능을 대폭 개선할 수 있으며, 완전히 정렬되어 있는 배열이 들어올 경우, O(N)까지 시간 복잡도를 향상시킬 수 있다.
+
+### 특징
+- 거품 정렬은 점점 큰 값들을 뒤에서부터 앞으로 하나씩 쌓여 나가게 하기 때문에 후반으로 갈수록 정렬 범위가 하나씩 줄어든다.
+- 왜냐면, 다음 패스에서는 이전 패스에서 뒤로 보내놓은 가장 큰 값이 있는 위치 전까지만 비교해도 되기 때문이다.
+- 제일 작은 값을 찾아서 맨 앞에 위치시키는 선택 정렬과 비교했을 때 정반대의 정렬 방향을 가진다.
+- 다른 정렬 알고리즘에 비해 swap이 빈번하게 일어나는 경향을 가졌다.
+- 최적화 여지가 많은 알고리즘이다. 
+
+### 파이썬 소스코드 구현
+
+```py
+def bubble_sort(arr):
+    for i in range(len(arr) - 1, 0, -1):
+        for j in range(i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+```
+
+#### 최적화
+
+```py
+def bubble_sort(arr):
+    for i in range(len(arr) - 1, 0, -1):
+        swapped = False
+        for j in range(i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        if not swapped:
+            break
+```
+
+#### 추가 최적화
+
+```py
+def bubble_sort(arr):
+    end = len(arr) - 1
+    while end > 0:
+        last_swap = 0
+        for i in range(end):
+            if arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                last_swap = i
+        end = last_swap
+```
+
+## Insertion Sort(삽입 정렬)
+- 정렬 범위를 1칸씩 확장해나가면서 새롭게 정렬범위에 들어온 값을 기존 값들과 비교하여 알맞은 자리에 꼽아주는 알고리즘이다. 
+
+### 복잡도 분석
+- 삽입 정렬은 별도의 추가 공간을 사용하지 않고 주어진 배열이 차지하고 있는 공간 내에서 값들의 위치만 바꾸기 때문에 O(1)의 공간 복잡도를 가진다.
+- 시간 복잡도는 우선 루프문을 통해 정렬 범위를 2개로 시작해서 전체로 확장해야 하기 때문에 기본적으로 O(N)을 소모한다.
+- 각 패스에서는 정렬 범위에 새롭게 추가된 값과 기존 값들의 대소 비교 및 자리 교대를 위해서 O(N)이 필요하게 된다.
+- 따라서 삽입 정렬은 총 O(N^2)의 시간 복잡도를 가지는 정렬 알고리즘이다.
+- 아래에서 다룰 최적화를 통해서 부분적으로 정렬된 배열에 대해서 성능을 대폭 개선할 수 있으며, 특히 완전히 정렬되어 있는 배열이 들어올 경우, O(N)까지도 시간 복잡도를 향상시킬 수 있다.
+
+### 특징
+- 선택/거품 정렬은 패스가 거듭될 수록 탐색 범위가 줄어드는 반면에 삽입 정렬은 오히려 점점 정렬 범위가 넓어진다.
+- 큰 크림에서 보았을 때 바깥 쪽 루프는 순방향, 안 쪽 루프는 역방향으로 진행한다.
+
+### 파이썬 소스코드 구현
+
+```py
+def insertion_sort(arr):
+    for end in range(1, len(arr)):
+        for i in range(end, 0, -1):
+            if arr[i - 1] > arr[i]:
+                arr[i - 1], arr[i] = arr[i], arr[i - 1]
+```
+
+#### 최적화
+
+```py
+def insertion_sort(arr):
+    for end in range(1, len(arr)):
+        i = end
+        while i > 0 and arr[i - 1] > arr[i]:
+            arr[i - 1], arr[i] = arr[i], arr[i - 1]
+            i -= 1
+```
+
+#### 추가 최적화
+
+```py
+def insertion_sort(arr):
+    for end in range(1, len(arr)):
+        to_insert = arr[end]
+        i = end
+        while i > 0 and arr[i - 1] > to_insert:
+            arr[i] = arr[i - 1]
+            i -= 1
+        arr[i] = to_insert
+```
+
+# Reference
+- [[알고리즘] 선택 정렬 - Selection Sort (Python, Java)](https://www.daleseo.com/sort-selection/)
+- [[알고리즘] 거품 정렬 - Bubble Sort (Python, Java)](https://www.daleseo.com/sort-bubble/)
+- [[알고리즘] 삽입 정렬 - Insertion Sort (Python, Java)](https://www.daleseo.com/sort-insertion/)
+- [문자열 메소드 참고](https://docs.python.org/ko/3/library/stdtypes.html?highlight=endswith#string-methods)
+- [Python에서 시간측정하기](https://jeongukjae.github.io/posts/python에서-시간측정하기/)
+- [정렬(Sort) 알고리즘 정리노트](https://deepinsight.tistory.com/160)
