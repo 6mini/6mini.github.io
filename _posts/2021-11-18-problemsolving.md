@@ -7,10 +7,6 @@ tags: [Computer Science, pseudocode, comprehension, assert]
 mathjax: enable
 ---
 
-- 키워드: 문제해결, 의사코드, 컴프리헨션
-- [프로그래밍에서의 문제해결전략](https://youtu.be/XVhYjmNbgRs)
-- [예외처리에 대해서](https://youtu.be/g7dzMgrWFic)
-
 # 문제해결
 - 의사코드(pseudocode)를 작성하며 로직을 코드로 표현하는 방법을 배운다.
 - 알고리즘과 같이 수식이나 익숙하지 않은 개념에 대해 접근하는 경우를 위해 의사코드를 작성한다.
@@ -203,3 +199,5 @@ assert not bool_return(3,6)
 - [string의 변화에 대해 예상해보자](https://leetcode.com/problemset/all/?topicSlugs=string)
 - [숫자와 일상생활](https://www.acmicpc.net/step/8)
 - [특이한 숫자를 다뤄보자](https://www.acmicpc.net/step/10)
+- [프로그래밍에서의 문제해결전략](https://youtu.be/XVhYjmNbgRs)
+- [예외처리에 대해서](https://youtu.be/g7dzMgrWFic)

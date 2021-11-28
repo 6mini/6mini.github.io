@@ -7,11 +7,6 @@ tags: [Computer Science, DataStructure, Algorithm, 알고리즘, Insertion Sort,
 mathjax: enable
 ---
 
-- 키워드: 교환개념, 정렬
-- [알고리즘에 대해서](https://youtu.be/HOANXJDcB90)
-- [정렬 알고리즘이 중요한 이유](https://youtu.be/nqNPYD3wo-4)
-- [버블소트 거품정렬 5분만에 이해하기](https://youtu.be/RCnyz-Bfkmc)
-
 # 자동화
 
 ## 다양성
@@ -252,3 +247,6 @@ def insertion_sort(arr):
 - [문자열 메소드 참고](https://docs.python.org/ko/3/library/stdtypes.html?highlight=endswith#string-methods)
 - [Python에서 시간측정하기](https://jeongukjae.github.io/posts/python에서-시간측정하기/)
 - [정렬(Sort) 알고리즘 정리노트](https://deepinsight.tistory.com/160)
+- [알고리즘에 대해서](https://youtu.be/HOANXJDcB90)
+- [정렬 알고리즘이 중요한 이유](https://youtu.be/nqNPYD3wo-4)
+- [버블소트 거품정렬 5분만에 이해하기](https://youtu.be/RCnyz-Bfkmc)
