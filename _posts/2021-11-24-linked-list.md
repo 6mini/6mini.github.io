@@ -7,10 +7,6 @@ tags: [Computer Science, DataStructure, Linked List, Queue, Stack, Deque, 연결
 mathjax: enable
 ---
 
-- 키워드: 추상자료형, 파이썬 내장함수, Data Structure
-- [자료구조를 알아야 하는 이유](https://youtu.be/OH7prOt3vQA)
-- [무조건 알아야하는 자료구조/ADT](https://youtu.be/Nk_dGScimz8)
-
 # ADT
 - 자료구조 핵심: ADT(Abstract Data Type)와 연결리스트, 큐, 스택
 - 프로그래밍을 하면서 데이터 처리를 위한 자료형이 존재한다.
@@ -424,3 +420,5 @@ class Deque:
 - [파이썬의 문법을 활용한 자료구조](https://docs.python.org/ko/3/tutorial/datastructures.html)
 - [파이썬 복잡도 상세내용](https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt)
 - [데이터의 7V](https://3months.tistory.com/348)
+- [자료구조를 알아야 하는 이유](https://youtu.be/OH7prOt3vQA)
+- [무조건 알아야하는 자료구조/ADT](https://youtu.be/Nk_dGScimz8)

@@ -7,14 +7,6 @@ tags: [Computer Science, Python, Lambda, re]
 mathjax: enable
 ---
 
-- 방향: 문제 해결을 위해 파이썬을 활용하고, 함수, 반복과 조건개념에 익숙해지는 것
-- CS의 최종 목적: 자료구조와 알고리즘을 이해하며 프로그래밍 하는 것
-- CS의 핵심 키워드: 문제 해결과 컴퓨팅 사고력
-
-- [데이터 과학자가 미래에 핫한 직업인 이유](https://youtu.be/dZZfDj_ieEU)
-- [프로그래밍을 배워야 하는 이유는?](https://www.youtube.com/watch?v=SESuctdE9vM)
-- (둘다 봤던거누ㅋㅋㅋ, 문득 결국 이런 것들이 모여 내가 개발을 시작하게 된 것인가 싶네)
-
 # Programming
 
 ## 문제해결
@@ -496,3 +488,5 @@ robbsansaaryabrandonrickon
     - [if문 다루기](https://www.acmicpc.net/step/4)
     - [for문 다루기](https://www.acmicpc.net/step/3)
     - [문자열 다루기](https://www.acmicpc.net/step/7)
+- [데이터 과학자가 미래에 핫한 직업인 이유](https://youtu.be/dZZfDj_ieEU)
+- [프로그래밍을 배워야 하는 이유는?](https://www.youtube.com/watch?v=SESuctdE9vM)
