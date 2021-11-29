@@ -220,6 +220,7 @@ social:
   SixTest: http://www.sixtest.site/
   Co-Ther19: https://cother.herokuapp.com/
   FASI: https://fasi.herokuapp.com/
+  Sixpotify: https://www.facebook.com/sixpotify
 
 # Social Links Icons
 # Icon Mapping:
@@ -236,6 +237,7 @@ social_icons:
   SixTest: search
   Co-Ther19: certificate
   FASI: male
+  Sixpotify: headphones
   # Twitter: twitter
   # Weibo: weibo
 
