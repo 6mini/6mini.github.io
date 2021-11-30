@@ -1,9 +1,9 @@
 ---
-title: '[Retrospect] CodeStates AI Bootcamp 탑승'
+title: '코드스테이츠 AI 부트캠프 탑승기'
 description: 코드스테이츠 부트캠프 탑승기 및 OT 간략 요약
 categories:
  - Retrospect
-tags: [Retrospect, AI]
+tags: []
 ---
 
 직업군인이었던 내가 전역 후 '개발자'로서의 길을 걸으려는 이유는 그리 복잡하지 않다. 항상 사회에 맞춰 '소비자'로서만 살았는데, 이제는 가치를 제공하는 사람이 되고 싶었다.

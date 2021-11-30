@@ -1,13 +1,11 @@
 ---
-title: "[ML] Basic assumptions of linear regression data"
+title: "[ML] Basic Assumptions of Linear Regression"
 description: How to make good linear regression model? The four basic assumptions of linear regression analysis.
 categories:
- - DS ENG SG
-tags: [DS ENG SG, ML]
+ - Machine Learning
+tags: [Linear Regression]
 mathjax: enable
 ---
-
-This posting is for preparing for the presentation of the Data Science English Study Group.
 
 # How to make good linear regression model?
 
