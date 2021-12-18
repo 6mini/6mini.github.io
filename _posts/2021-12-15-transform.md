@@ -1,6 +1,6 @@
 ---
 title: '[스파크] 트랜스포메이션(Transformations)과 액션(Actions)'
-description: 스파크(Spark)의 트랜스포메이션(Narrow, Wide)과 액션에 대한 개념과 함수, 코드 예제
+description: 스파크(Spark)의 트랜스포메이션(Narrow, Wide)과 액션에 대한 개념과 함수, 코드 예제, Paird RDD의 트랜스포메이션과 액션
 categories:
  - Data Engineering
 tags: [스파크, 트랜스포메이션, 액션, 데이터 엔지니어링]
@@ -292,4 +292,195 @@ foods.distinct().count() # 엘리먼트 갯수 유니크하여 전시
 foods.foreach(lambda x: print(x))
 # 실행시켜도 리턴값은 없지만, 워커 노드에서 실행이 되기 때문에 현재 드라이버 프로그램에서는 보이지 않는다.
 # RDD를 연산하거나 로그를 세이브할 때 유용하게 쓰인다.
+```
+
+# Key-Value RDD의 트랜스포메이션과 액션
+- 대표적인 트랜스포메이션으로,
+    - groupByKey
+    - reduceByKey
+    - mapValues
+    - keys
+    - join(leftOuterJoin, rightOuterJoin) 등이 있다.
+- 액션에는 countByKey가 있다.
+- 대부분의 오퍼레이션이 트랜스포메이션인 경우가 많은데, 키 벨류 RDD 처리 과정의 결과값이 파티션이 유지가 안되더라도 값이 굉장히 큰 경우가 많기 때문이다.
+
+## groupByKey
+- 주어지는 키를 기준으로 그룹핑한다.
+- `RDD.groupByKey(numPartitions=None, partitionFunc=<function portable_hash>)`
+
+```py
+rdd = sc.parallelize([('a', 1), ('b', 1), ('a', 1)])
+sorted(rdd.groupByKey().mapValues(len).collect())
+'''
+[('a', 2), ('b', 1)]
+'''
+sorted(rdd.groupByKey().mapValues(list).collect())
+'''
+[('a', [1, 1]), ('b', [1])]
+'''
+```
+
+- len을 넣는다면 갯수, list를 넣는다면 리스트를 반환해준다.
+
+### groupBy 예제
+
+```py
+grouped = sc.parallelize([
+    'C', 'C++', 'Python', 'Java', 'C#'
+]).groupBy(lambda x: x[0].collect())
+
+for k, v in grouped:
+    print(k, list(v))
+'''
+J ['Java']
+C ['C', 'C++', 'C#']
+P ['Python']
+'''
+```
+
+### groupByKey 예제
+
+```py
+x = sc.parallelize([
+    ('MATH', 7), ('MATH', 2), ('ENGLISH', 7), 
+    ('SCIENCE', 7), ('ENGLISH', 4), ('ENGLISH', 9), 
+    ('MATH', 8), ('MATH', 3), ('ENGLISH', 4), 
+    ('SCIENCE', 6), ('SCIENCE', 9), ('SCIENCE', 5), 
+], 3)
+
+y = x.groupByKey()
+print(y.getNumPartitions())
+'''
+3
+'''
+
+y = x.groupByKey(2) # 임의로 파티션 지정
+print(y.getNumPartitions())
+'''
+2
+'''
+
+for t in y.collect():
+    print(t[0], list(t[1]))
+'''
+MATH [7, 2, 8, 3]
+ENGLISH [7, 4, 9, 4]
+SCIENCE [7, 6, 9, 5]
+'''
+```
+
+## reduceByKey
+- Key를 기준으로 그룹을 만들고 합친다.
+- RDD.reduceByKey(func, numPartitions=None, partitionFunc=<function portable_hash>)
+
+```py
+rdd = sc.parallelize([("a", 1), ("b", 1), ("a", 1)])
+sorted(rdd.reduceByKey(add).collect())
+'''
+[('a', 2), ('b', 1)]
+'''
+```
+
+- 개념적으로는 groupByKey에 리덕션을 한 것과 같지만, groupByKey보다 훨씬 빠르다는 장점이 있다.
+
+```py
+x = sc.parallelize([
+    ('MATH', 7), ('MATH', 2), ('ENGLISH', 7), 
+    ('SCIENCE', 7), ('ENGLISH', 4), ('ENGLISH', 9), 
+    ('MATH', 8), ('MATH', 3), ('ENGLISH', 4), 
+    ('SCIENCE', 6), ('SCIENCE', 9), ('SCIENCE', 5), 
+], 3)
+
+x.reduceByKey(lambda a, b: a+b).collect()
+'''
+[('MATH', 20), ('ENGLISH', 24), ('SCIENCE', 27)]
+'''
+```
+
+## mapValues
+- 사용자가 정의한 함수를 값에 적용할 때 사용된다.
+- 파티션과 키가 그대로 있다는 장점이 있다.
+    - 파티션과 키가 왔다 갔다 할 때 네트워크 코스트가 크기 때문에 성능을 향상시킬 수 있다.
+
+```py
+x = sc.parallelize([("a", ["apple", "banana", "lemon"]), ("b", ["grapes"])])
+def f(x): return len(x)
+x.mapValues(f).collect()
+'''
+[('a', 3), ('b', 1)]
+'''
+```
+
+## countByKey
+- 각 키가 가진 요소들을 센다.
+
+```py
+rdd = sc.parallelize([("a", 1), ("b", 1), ("a", 1)])
+sorted(rdd.countByKey().items())
+'''
+[('a', 2), ('b', 1)]
+'''
+```
+
+## keys
+- 하나의 트랜스포메이션이며 모든 키를 가진 RDD를 생성한다.
+
+```py
+m = sc.parallelize([(1, 2), (3, 4)]).keys()
+m.collect()
+'''
+[1, 3]
+'''
+```
+
+```py
+x = sc.parallelize([
+    ('MATH', 7), ('MATH', 2), ('ENGLISH', 7), 
+    ('SCIENCE', 7), ('ENGLISH', 4), ('ENGLISH', 9), 
+    ('MATH', 8), ('MATH', 3), ('ENGLISH', 4), 
+    ('SCIENCE', 6), ('SCIENCE', 9), ('SCIENCE', 5), 
+], 3)
+
+x.keys().distinct().count() # 키를 유니크하게 만들고 갯수를 반환
+'''
+3
+'''
+```
+
+## Joins
+- 트랜스포메이션으로 작동하며 여러개의 RDD를 합치는데 사용된다.
+- 대표적으로 두가지의 Join 방식이 존재한다.
+    - Inner Join(join)
+    - Outer Join(left outer, right outer)
+
+### Inner Join
+
+<img width="282" alt="image" src="https://user-images.githubusercontent.com/79494088/145792451-5e625327-0471-452c-93de-92fe2f787585.png">
+
+- 서로 연관된 데이터만 가져온다.
+
+### Outer Join
+
+<img width="897" alt="image" src="https://user-images.githubusercontent.com/79494088/145792568-e5f0c0fc-ed5f-4203-a443-c9eb8ae0ecb4.png">
+
+- 한쪽에는 데이터가 있고 다른쪽에 없는 경우, 데이터가 있는 쪽의 데이터를 출력한다.
+    - `leftOuterJoin`: 왼쪽에 있는 데이터를 모두 출력, 반대편에 데이터가 없는 경우 None
+    - `rightOuterJoin`: 오른쪽에 있는 데이터를 모두 출력, 반대편에 데이터가 없는 경우 None
+
+```py
+rdd1 = sc.parallelize([('foo', 1), ('bar', 2), ('baz', 3)])
+rdd2 = sc.parallelize([('foo', 4), ('bar', 5), ('baz', 6), ('zoo', 1)])
+
+rdd1.join(rdd2).collect()
+'''
+[('bar', (2, 5)), ('bar', (2, 6)), ('foo', (1, 4))]
+'''
+rdd1.leftOuterJoin(rdd2).collect()
+'''
+[('baz', (3, None)), ('bar', (2, 5)), ('bar', (2, 6)), ('foo', (1, 4))]
+'''
+rdd1.rightOuterJoin(rdd2).collect()
+'''
+[('bar', (2, 5)), ('bar', (2, 6)), ('zoo', (None, 1)), ('foo', (1, 4))]
+'''
 ```
