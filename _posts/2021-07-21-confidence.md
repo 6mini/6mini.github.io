@@ -1,11 +1,12 @@
 ---
-title: '[Statistics] 신뢰구간 예제로 이해하기'
-description: 어려웠던 신뢰구간을 예제 문제를 통해 이해하는 과정을 담은 포스팅
+title: '[통계] 예제로 이해하는 신뢰구간'
+description: 어려운 신뢰구간을 예제 문제를 통해 이해하는 과정
 categories:
- - Did Unknown
-tags: [Did Unknown, Python, 신뢰구간]
+ - Statistics
+tags: [통계, 신뢰구간]
 ---
-[신뢰구간 포스팅 바로가기](https://6mini.github.io/fundamentals%20to%20ds/2021/07/19/stat3/)
+
+- [신뢰구간 포스팅 바로가기](https://6mini.github.io/statistics/2021/07/19/ci/)
 
 # 데이터셋
 
