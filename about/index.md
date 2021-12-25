@@ -56,7 +56,7 @@ type: about
 
 ## [Kaggle](https://www.kaggle.com/real6mini)
 - 코드스테이츠에서 주최하는 프라이빗 컴퍼티션 '설문조사 정보 이용 H1N1 백신 접종 여부' 예측 대회 참여
-    ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/63cea6f5-e3d0-4b5c-b3b1-4287fb76f779/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211224%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211224T031132Z&X-Amz-Expires=86400&X-Amz-Signature=4ae3929cca122d0d5dc4d8ae4e60085423d07cebcda39c45df99b5ddbd7b68b7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+    ![image](https://user-images.githubusercontent.com/79494088/147384203-1416341d-9dd0-46f5-a7e2-ecb8dfdb2b73.png)
     - **413명 중 2등**
 
 ## FASI
