@@ -1,15 +1,15 @@
 ---
-title: '[DL mini Project] LSTM 애플(APPL) 주가 예측'
-description: LSTM을 이용하여 애플 주식을 예측하는 모델 구현
+title: '[DL 미니 프로젝트] LSTM 활용 애플(APPL) 주가 예측'
+description: LSTM을 이용하여 애플 주식을 예측하는 모델 구현 미니 프로젝트
 categories:
  - Project
-tags: [DL, project, 애플, APPL, 주가 예측, 주식]
+tags: [딥 러닝 프로젝트, APPL, 주가 예측]
 mathjax: enable
 ---
 
 # 개요
 - 오늘은 LSTM을 배운 날!
-- LSTM을 이용해 Deep Learning 주가 예측 머신을 만드는 튜토리얼이 많아 따라해보며 실습해보기로 한다.
+- LSTM을 이용해 딥 러닝 주가 예측 머신을 만드는 튜토리얼이 많아 따라해보며 실습해보기로 한다.
 - 나름 얼마 전 테슬라로 재미 좀 보고, 애플을 사랑하는 가치 투자 주주로써 애플을 활용하여 주가 예측을 해 볼 예정이다.
 
 # EDA & 전처리 & FE
@@ -35,7 +35,7 @@ df
 
 ![image](https://user-images.githubusercontent.com/79494088/139005548-afbc4c77-c470-4cb7-9f55-24247a9ef3d4.png)
 
-### Visualization
+### 시각화
 
 ```py
 # 시각화
@@ -50,7 +50,7 @@ plt.ylabel('price')
 
 ![image](https://user-images.githubusercontent.com/79494088/139005618-522df46c-3747-4e60-a77e-7cf493e0ad6d.png)
 
-### Nomalization
+### 정규화
 
 ```py
 # 정규화
@@ -88,7 +88,7 @@ def make_dataset(data, label, window_size=20):
     return np.array(feature_list), np.array(label_list)
 ```
 
-### Feature Label 정의
+### 피쳐 레벨 정의
 
 ```py
 feature_cols = ['Open', 'High', 'Low', 'Adj Close', 'Volume']
@@ -121,7 +121,7 @@ test_feature.shape, test_label.shape
 '''
 ```
 
-# Keras 활용 LSTM 모델 생성
+# 케라스 활용 LSTM 모델 생성
 
 ```py
 from keras.models import Sequential
@@ -211,7 +211,7 @@ plt.show()
 - 하지만 LSTM을 이해하는데 큰 도움이 되었다고 생각한다(재미와 더불어).
 - 주가 예측은 현실적으로 어려우니(현실적으로 가능했으면 딥러닝을 배운사람들은 때부자가 됐겠다.) 일획천금 노릴 생각하지말고 열심히 살자.
 
-# Reference
+# 참조
 - [딥러닝(LSTM)을 활용하여 삼성전자 주가 예측을 해보았습니다](https://teddylee777.github.io/tensorflow/LSTM%EC%9C%BC%EB%A1%9C-%EC%98%88%EC%B8%A1%ED%95%B4%EB%B3%B4%EB%8A%94-%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EC%A3%BC%EA%B0%80)
 - [주식 주가 데이터 다운로드 방법 정리](https://muzukphysics.tistory.com/entry/%EC%A3%BC%EC%8B%9D-%EC%A3%BC%EA%B0%80-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EB%B0%A9%EB%B2%95-%EC%A0%95%EB%A6%AC)
 - [(칼럼) 딥러닝 초보들이 흔히하는 실수 : 주식가격 예측 AI](https://codingapple.com/unit/deep-learning-stock-price-ai/)
