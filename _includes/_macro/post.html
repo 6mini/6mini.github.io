@@ -416,7 +416,6 @@
         </div>
       {% endif %}
       {% endunless %}
-
       {% if is_index %}
         {% assign per_page = paginator.per_page | default: site.posts.size %}
         {% assign index_modulo_per_page = forloop.index | modulo: per_page %}
@@ -429,10 +428,3 @@
       {% endif %}
     </footer>
   </article>
-<script src="https://utteranc.es/client.js"
-  repo="6mini/6mini.github.io"
-  issue-term="title"
-  theme="github-light"
-  crossorigin="anonymous"
-  async>
-</script>
