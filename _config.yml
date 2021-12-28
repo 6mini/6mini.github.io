@@ -390,13 +390,13 @@ han: false
 #duoshuo_shortname:
 
 # Disqus
-disqus:
-  enable: false
-  shortname: 6mini-blog
-  count: true
-  # hide comments (visitors need to click to load the comments)
-  # count need to be false when hide is true
-  hide: false
+# disqus:
+  # enable: true
+  # shortname: 6mini-blog
+  # count: true
+  # # hide comments (visitors need to click to load the comments)
+  # # count need to be false when hide is true
+  # hide: false
 
 # <wildfire>
 wildfire:
@@ -445,8 +445,8 @@ changyan:
 #livere_uid: your uid
 
 # Support for gitalk comments system.
-gitalk:
-  enable: true
+# gitalk:
+#   enable: true
   # clientID: f6359848446c5d3f4e86
   # clientSecret: 971efcceabad0dc928448dc0a7c4d6d48275f41a
   # repo: 6mini.github.io
