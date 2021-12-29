@@ -2,7 +2,7 @@
 title: '[통계] 가설 검정 방법(T-검정, 카이 제곱 검정)'
 description: T-검정(T-test)의 조건과 그 외의 다른 가설 검정 방법, Type of Error의 구분, 카이 제곱 검정의 목적과 사용 예시, 모수통계와 비모수통계의 차이
 categories:
- - Statistics
+ - Mathematics
 tags: [T-검정, 카이 제곱 검정, 통계, 비모수 통계, Type of Error]
 mathjax: enable
 ---

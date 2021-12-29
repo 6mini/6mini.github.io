@@ -1,9 +1,9 @@
 ---
-title: '[Retrospect] AI Bootcamp 3주차 회고 : 초심'
-description: 코드스테이츠 AI Bootcamp Section1 Sprint3(Linear Algebra) 3주차 회고
+title: '코드스테이츠 AI 부트캠프 3주차 회고: 초심'
+description: 코드스테이츠 AI 부트캠프 Section1 Sprint3(Linear Algebra) 3주차 회고
 categories:
  - Retrospect
-tags: [Retrospect, AI, Bootcamp, CodeStates, 코드스테이츠, 부트캠프, 회고]
+tags: []
 ---
 
 시작한 지 벌써 3주 차가 되었기 때문에 스스로 나태해진 걸 많이 느낀 것 같다. 지금까지 살아오면서 항상 그랬듯, 난 확실히 초반에 너무 힘을 줘버리기에 점점 빠진다. 이번 부트캠프에서 그걸 느낀 게 딱 이번 주차였던 것 같다. 7개월의 교육과정 치곤 생각보다 빨리 찾아왔다.
