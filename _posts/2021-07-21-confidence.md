@@ -2,7 +2,7 @@
 title: '[통계] 예제로 이해하는 신뢰구간'
 description: 어려운 신뢰구간을 예제 문제를 통해 이해하는 과정
 categories:
- - Statistics
+ - Mathematics
 tags: [통계, 신뢰구간]
 ---
 

@@ -2,7 +2,7 @@
 title: '[통계] 가설 검정(Hypothesis Test)이란?'
 description: Estimation/Sampling의 목적과 방법, 가설 검정에 대한 이해, T-test의 목적과 사용 예시
 categories:
- - Statistics
+ - Mathematics
 tags: [가설 검정, 통계]
 mathjax: enable
 ---

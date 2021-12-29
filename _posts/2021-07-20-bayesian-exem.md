@@ -2,7 +2,7 @@
 title: '[통계] 예제로 이해하는 베이지안(Bayesian)'
 description: 어려운 베이지안(Bayesian) 통계를 여러가지 문제 예제를 통해 이해하는 과정
 categories:
- - Statistics
+ - Mathematics
 tags: [베이지안, 통계]
 mathjax: enable
 ---

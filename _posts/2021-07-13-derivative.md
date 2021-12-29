@@ -2,7 +2,7 @@
 title: '[통계] 데이터 사이언스에서의 미분 기초'
 description: 최적화와 미분의 관계, 미분 / 편미분 / Chain Rule의 차이를 이해, 파이썬을 이용한 도함수 구현
 categories:
- - Statistics
+ - Mathematics
 tags: [미분, 데이터 사이언스, 파이썬]
 mathjax: enable
 ---
