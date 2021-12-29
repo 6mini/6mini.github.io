@@ -391,7 +391,7 @@ han: false
 
 # Disqus
 # disqus:
-  # enable: true
+#   enable: true
   # shortname: 6mini-blog
   # count: true
   # # hide comments (visitors need to click to load the comments)
@@ -431,10 +431,10 @@ wildfire:
 #gentie_productKey:
 
 # changyan
-changyan:
-  enable: false
-  appid:
-  appkey:
+# changyan:
+#   enable: true
+#   appid:
+#   appkey:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -447,11 +447,11 @@ changyan:
 # Support for gitalk comments system.
 # gitalk:
 #   enable: true
-  # clientID: f6359848446c5d3f4e86
-  # clientSecret: 971efcceabad0dc928448dc0a7c4d6d48275f41a
-  # repo: 6mini.github.io
-  # owner: 6mini
-  # admin: 6mini
+#   clientID: f6359848446c5d3f4e86
+#   clientSecret: 971efcceabad0dc928448dc0a7c4d6d48275f41a
+#   repo: 6mini.github.io
+#   owner: 6mini
+#   admin: 6mini
 
 # Baidu Share
 # Available value:
