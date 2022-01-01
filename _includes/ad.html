@@ -1,4 +1,3 @@
-{% if paginator.previous_page or paginator.next_page %}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061524058303875"
 crossorigin="anonymous"></script>
 <!-- 이윤민 -->
@@ -11,11 +10,3 @@ data-full-width-responsive="true"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
-  <nav class="pagination">
-    {% assign prev_text = '<i class="fa fa-angle-left"></i>' %}
-    {% assign next_text = '<i class="fa fa-angle-right"></i>' %}
-    {% include _helper/paginator.html %}
-    {{ paginator }}
-  </nav>
-{% endif %}
