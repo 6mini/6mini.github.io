@@ -1,38 +1,35 @@
 ---
-title: '[Computer Science] Python Programming'
-description: 파이썬 메소드에 대해 내부로직에 대한 생각과 각종 상황에서의 활용, 다양한 코드를 활용한 컬렉션 자료형(리스트, 튜플, 셋, 딕셔너리), 현실상황을 수학적 기초개념(사칙연산)으로 프로그래밍
+title: '[파이썬] 파이썬에서의 프로그래밍'
+description: 파이썬 메소드에 대해 내부 로직에 대한 생각과 각종 상황에서의 활용. 다양한 코드를 활용한 컬렉션 자료형(리스트, 튜플, 셋, 딕셔너리). 현실상황을 수학적 기초개념(사칙연산)으로 프로그래밍
 categories:
  - Computer Science
-tags: [Computer Science, Python, Lambda, re]
+tags: [컴퓨터 사이언스, 파이썬, 정규표현식, 람다]
 mathjax: enable
 ---
 
-# Programming
+# 파이썬 프로그래밍
 
 ## 문제해결
 - 복잡한 문제를 작은 문제로 분할하면서 해결한다.
 - 문제에 대한 패턴을 발견한다.
 - 최소한의 비용으로 최대한 빠르게 해결한다.
 
-### 참고
-- [문제 해결을 위한 과학적 사고](https://dojang.io/mod/page/view.php?id=2151)
-- [소프트웨어 교육과 파이썬](https://www.youtube.com/watch?v=DZSde316k3E)
-
 ## 기반기술
 
 <img width="600" alt="스크린샷 2021-11-17 15 49 33" src="https://user-images.githubusercontent.com/79494088/142148754-79fd7ac3-5e31-4b47-bcbd-2de4033df6f8.png">
 
 - 파이썬, 알고리즘, 자료구조는 생산을 위한 도구이다.
-- 파이썬: 컴퓨터와의 소통언어(ex. 수학)
-- 알고리즘: 효율적인 문제해결방법(ex. 사칙연산 or 미적분)
-- 자료구조: 프로그램의 구조와 크기(ex. 수학문제들간의 관계와 난이도)
+    - 파이썬: 컴퓨터와의 소통 언어(예를 들어, 수학)
+    - 알고리즘: 효율적인 문제 해결 방법(예를 들어, 사칙연산 또는 미적분)
+    - 자료구조: 프로그램의 구조와 크기(예를 들어, 수학 문제들간의 관계와 난이도)
 
-# Control Statement
+# 제어문(Control Statement)
 
 ## 정규표현식
 - 특정한 규칙을 가진 문자열의 집합을 표현하는 형식이다.
 - 복잡한 문자열을 처리할 때 사용하는 기법이다.
 - 파이썬 이외에도 모든 프로그래밍 언어에서 공통적으로 사용한다.
+- 데이터를 분석하기 전 데이터를 구분하기 위해 많이 활용된다.
 
 ```py
 import re
@@ -83,9 +80,6 @@ for text in info:
 010-5678-5679
 '''
 ```
-
-- [정규 표현식](https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D)
-- [정규 표현식 살펴보기](https://wikidocs.net/1642)
 
 ## 다양한 메소드
 
@@ -160,9 +154,9 @@ list_var[1].append(5)
 
 print(list_var)  # 원래 변수
 
-print(list_var_deepcopy)  # deepcopy : append와 같은 메소드를 써도 값이 변경되지 않음
+print(list_var_deepcopy)  # deepcopy: append와 같은 메소드를 써도 값이 변경되지 않음
 
-print(list_var_copy)  # copy : 원본이 변경되었으므로 함께 변경됨
+print(list_var_copy)  # copy: 원본이 변경되었으므로 함께 변경됨
 '''
 [[1, 2], [3, 4, 5]]
 [[1, 2], [3, 4]]
@@ -171,6 +165,8 @@ print(list_var_copy)  # copy : 원본이 변경되었으므로 함께 변경됨
 ```
 
 - [얕은 복사, 깊은 복사 파헤치기](https://blueshw.github.io/2016/01/20/shallow-copy-deep-copy/)
+    - 얕은복사(shallow copy)는 복합객체(껍데기)만 복사, 그 내용은 동일한 객체이다.
+    - 깊은복사(deep copy)는 복합객체 복사 + 그 내용도 재귀적으로 복사한다.
 
 ## 반복문과 조건문
 
@@ -202,7 +198,9 @@ for x,y,z in zip(a,b,c):
 '''
 ```
 
-## 에러상황파악
+{% include ad.html %}
+
+## 에러 상황 파악
 
 ```py
 # 케이스 1 - IndentationError
@@ -238,13 +236,13 @@ def A():
   print(a,c,) # 경고는 명시적으로 보이지 않지만, 메모리 비효율/휴먼 에러 등이 발생할 수 있다.
 ```
 
-## Collection 자료형
+## 컬렉션(Collection) 자료형
 
 ### 내장 메소드
 
 #### append(), extend(), insert()
-    - a.insert(len(a), x) 는 a.append(x) 와 동등합니다.
-- [파이썬 자료 구조](https://urclass.codestates.com/2cc42947-2a15-4b11-97ec-ddc4b512183a?playlist=592#:~:text=append()%2C%20extend()%2C%20insert,%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9E%90%EB%A3%8C%20%EA%B5%AC%EC%A1%B0)
+- a.insert(len(a), x)는 a.append(x)와 동등하다.
+    - [파이썬 자료 구조](https://docs.python.org/ko/3/tutorial/datastructures.html)
 
 ```py
 my_list=[]
@@ -291,7 +289,7 @@ list1: ['bread', 'meat', 'Lettuce', 2, 5], list2: ['Lettuce', 2, 5]
 '''
 ```
 
-#### del, remove, pop
+#### del(), remove(), pop()
 
 ```py
 list1 = [11, 12, 43, 4, 6]
@@ -328,7 +326,7 @@ print(my_list)
 '''
 ```
 
-#### count()와 index()
+#### count(), index()
 - [파이썬의 list.count() vs list.index() 메소드 특징](https://urclass.codestates.com/2cc42947-2a15-4b11-97ec-ddc4b512183a?playlist=592#:~:text=count()%EC%99%80%20index,%EB%A9%94%EC%86%8C%EB%93%9C%20%ED%8A%B9%EC%A7%95%20%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0)
 
 ```py
@@ -402,12 +400,11 @@ print(list_update(list_test))
 '''
 ```
 
-# Lambda
-- [람다 대수](https://ko.wikipedia.org/wiki/%EB%9E%8C%EB%8B%A4_%EB%8C%80%EC%88%98)
-    - 함수는 컴퓨터 과학과 수학의 기초를 이루는 개념이다.
-    - 람다 대수는 함수를 단순하게 표현할 수 있도록 하여 '함수의 계산'이라는 개념을 더 깊이 이해할 수 있게 돕는다.
+# 람다(Lambda)
+- 함수는 컴퓨터 과학과 수학의 기초를 이루는 개념이다.
+- 람다 대수는 함수를 단순하게 표현할 수 있도록 하여 '함수의 계산'이라는 개념을 더 깊이 이해할 수 있게 돕는다.
 - 람다는 인라인으로 작성할 수 있기 때문에 전체 함수보다 읽기 쉽다. 따라서 함수 표현식의 규모가 작을 때 람다를 사용하는 것이 좋다.
-- 람다 함수의 장점은 함수 객체를 반환한다. 따라서 함수 객체를 인수로 필요로하는 map 또는 filter와 같은 함수와 함께 사용할 때 유용하다.
+- 람다 함수의 장점은 함수 객체를 반환한다. 따라서 함수 객체를 인수로 필요로 하는 map 또는 filter와 같은 함수와 함께 사용할 때 유용하다.
 
 ```py
 # 함수정의
@@ -470,23 +467,16 @@ print(result)
 robbsansaaryabrandonrickon
 '''
 ```
-
-# Review
-
-## TIL
-- 파이썬의 다양한 활용법
-- 파이썬 메소드의 활용
-- 파이썬 컬렉션 자료형의 활용 
-
-## TIWL
-- 수학기본개념이 들어간 파이썬 코드를 다양하게 활용해보기
-- 컬렉션 자료형에 대해 생각해보기
-
-# Reference
-- [파이썬 공식문서 : 리스트 슬라이싱]()
+# 참조
+- [파이썬 공식문서: 리스트 슬라이싱](https://docs.python.org/ko/3/tutorial/introduction.html#lists)
 - 프로그래밍과 함께 생각해보기
     - [if문 다루기](https://www.acmicpc.net/step/4)
     - [for문 다루기](https://www.acmicpc.net/step/3)
     - [문자열 다루기](https://www.acmicpc.net/step/7)
 - [데이터 과학자가 미래에 핫한 직업인 이유](https://youtu.be/dZZfDj_ieEU)
 - [프로그래밍을 배워야 하는 이유는?](https://www.youtube.com/watch?v=SESuctdE9vM)
+- [문제 해결을 위한 과학적 사고](https://dojang.io/mod/page/view.php?id=2151)
+- [소프트웨어 교육과 파이썬](https://www.youtube.com/watch?v=DZSde316k3E)
+- [정규 표현식](https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D)
+- [정규 표현식 살펴보기](https://wikidocs.net/1642)
+- [람다 대수](https://ko.wikipedia.org/wiki/%EB%9E%8C%EB%8B%A4_%EB%8C%80%EC%88%98)
