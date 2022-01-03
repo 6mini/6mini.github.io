@@ -3,7 +3,7 @@ title: "[ML] Heteroscedasticity"
 description: Problems and solutions of heteroscedasticity.
 categories:
  - DaSeng
-tags: [Heteroscedasticity]
+tags: []
 mathjax: enable
 ---
 
