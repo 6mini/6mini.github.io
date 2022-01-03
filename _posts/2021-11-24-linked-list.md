@@ -1,24 +1,22 @@
 ---
-title: '[DataStructure] ADT, Linked List, Queue, Stack'
-description: 자료구조와 알고리즘 반복학습, 자료구조의 코어가 되는 추상자료형(ADT)과 연결리스트, 큐, 스택의 파이썬 코드 구현
+title: '[자료구조] ADT, 연결리스트(Linked List), 큐(Queue), 스택(Stack)'
+description: 자료구조의 코어가 되는 추상자료형(ADT)과 연결리스트(Linked List), 큐(Queue), 스택(Stack)의 개념 및 파이썬 코드 구현
 categories:
  - Computer Science
-tags: [Computer Science, DataStructure, Linked List, Queue, Stack, Deque, 연결리스트, 큐, 뎈, 스택]
+tags: [컴퓨터 사이언스, 자료구조, ADT, 연결리스트, 큐, 스택, 덱]
 mathjax: enable
 ---
 
-# ADT
-- 자료구조 핵심: ADT(Abstract Data Type)와 연결리스트, 큐, 스택
+# ADT(Abstract Data Type)
 - 프로그래밍을 하면서 데이터 처리를 위한 자료형이 존재한다.
 - 파이썬에서 프로그래밍을 위한 도구인 기본자료형(숫자, 문자열, 리스트, 딕셔너리 등)이 있다.
 - **ADT는 추상적으로 필요한 기능을 나열한 일종의 명세서(로직)이다.**
   - 기본자료형을 활용하여 사용자에 의해 구현된다.
-- abstract는 소프트웨어가 발전하면서 프로그램의 크기나 복잡도가 같이 증가하였고 프로그램의 핵심부분을 간단하게 설명하기 위해 생겨났다.
-  - 참고: [추상화](https://ko.wikipedia.org/wiki/추상화_(컴퓨터_과학))
+- `abstract`는 소프트웨어가 발전하면서 프로그램의 크기나 복잡도가 같이 증가하였고 프로그램의 핵심부분을 간단하게 설명하기 위해 생겨났다.
 
 ![ADT](https://user-images.githubusercontent.com/79494088/143015084-1226a32c-16b9-4145-83e5-ba86c12f1d16.png)
 
-# linked-list(연결리스트)
+# 연결리스트(linked-list)
 
 <img width="688" alt="연결리스트_리스트" src="https://user-images.githubusercontent.com/79494088/143015177-c62c941a-f12a-4477-9756-f957a1e9962c.png">
 
@@ -27,21 +25,21 @@ mathjax: enable
 
 ![image](https://user-images.githubusercontent.com/79494088/143208265-5bd7a1c7-b197-4332-bd98-09cf5d097262.png)
 
-- Linked list는 Array처럼 선형 데이터 자료구조이지만, Array는 물리적인 배치 구조 자체가 연속적으로 저장되어 있고, Linked Array는 위 노드의 Next 부분에 다음 노드의 위치를 저장함으로써 선형적인 데이터 자료구조를 가진다.
-- List의 삽입과 삭제의 시간복잡도가 O(n)이 걸리는 것은 배열이 물리적인 데이터의 저장 위치가 연속적이어야 하므로 데이터를 옮기는 연산작업이 필요하기 때문이다.
-- 하지만 Linked list는 데이터를 삽입, 샂게할 경우, 노드의 Next 부분에 저장한 다음 노드의 포인터만 변경해주면 되므로 배열과 비교했을 때 Linked list가 효율적으로 데이터를 삽입, 삭제할 수 있다.
+- 연결 리스트는 Array처럼 선형 데이터 자료구조이지만, Array는 물리적인 배치 구조 자체가 연속적으로 저장되어 있고, Linked Array는 위 노드의 Next 부분에 다음 노드의 위치를 저장함으로써 선형적인 데이터 자료구조를 가진다.
+- 리스트의 삽입과 삭제의 시간복잡도가 O(n)이 걸리는 것은 배열이 물리적인 데이터의 저장 위치가 연속적이어야 하므로 데이터를 옮기는 연산작업이 필요하기 때문이다.
+- 하지만 연결 리스트는 데이터를 삽입, 삭제할 경우, 노드의 Next 부분에 저장한 다음 노드의 포인터만 변경해주면 되므로 배열과 비교했을 때 연결 리스트가 효율적으로 데이터를 삽입, 삭제할 수 있다.
 - 하지만 특정 위치의 데이터를 탐색하기 위해서는 첫 노드부터 탐색을 시작해야한다.
 - 그 시간이 O(n)만큼 걸리게 되므로 탐색에 있어서는 배열이나 트리 구조에 비해 상대적으로 느리다.
 
 ## 장점
-- Linked list의 길이를 동적으로 조절 가능하다.
+- 연결 리스트의 길이를 동적으로 조절 가능하다.
 - 데이터의 삽입과 삭제가 쉽다.
 
 ## 단점
 - 임의의 노드에 바로 접근할 수 없다.
 - 다음 노드의 위치를 저장하기 위한 추가 공간이 필요하다.
 - Cache locality를 활용해 근접 데이터를 사전에 캐시에 저장하기 어렵다.
-- Linked list를 거꾸로 탐색하기 어렵다.
+- 연결 리스트를 거꾸로 탐색하기 어렵다.
 
 ## 단일 연결 리스트
 - 각 노드에 자료 공간에 한 개의 포인터 공간이 있고, 각 노드의 포인터는 다음 노드를 가리킨다.
@@ -103,7 +101,7 @@ class linked_list:
     def del_node(self,value):
         """
 
-        Linkedlist에 value값을 가지고 있는 Node를 삭제하는 메소드를 작성해주세요.        
+        Linkedlist에 value값을 가지고 있는 Node를 삭제하는 메소드
         input: value
             value: Linkedlist에서 삭제할 Node Value
         output:
@@ -159,8 +157,10 @@ class linked_list:
                 node = node.next
 ```
 
-# Queue
-- 큐란 목록 한쪽 끝에서만 자료를 넣고 다른 한쪽 끝에서만 자료를 빼낼 수 있는 자료구조이다.
+{% include ad.html %}
+
+# 큐(Queue)
+- 큐란 목록 한 쪽 끝에서만 자료를 넣고 다른 한쪽 끝에서만 자료를 빼낼 수 있는 자료구조이다.
 - 먼저 집어넣은 데이터가 먼저 나오는(FIFO: Fist In, First Out, 선입선출)구조로 데이터를 저장한다.
 - 데이터가 입력한 순서대로 처리되어야 할 경우에 사용한다.
 - 큐에 새로운 데이터가 들어오면 큐의 끝에 데이터가 추가되며(enqueue), 반대로 삭제될 때는 첫번째 위치의 데이터가 삭제된다(dequeue).
@@ -220,7 +220,7 @@ class Queue():
         return self.queue
 ```
 
-# Stack
+# 스택(Stack)
 - 스택은 데이터의 삽입과 삭제가 저장소의 맨 윗 부분(the top of stack)에서만 일어나는 자료구조이다.
 - 스택은 데이터가 순서대로 저장되고 스택의 마지막에 넣은 요소가 처음으로 꺼내진다(LIFO: Last In, First Out).
 - 스택은 연속으로 저장된 데이터 구조를 가지고 있고 맨 위 요소에 대한 포인터(주소값)을 갖고 있는 Array나 singly linked list로 구현할 수 있다.
@@ -232,7 +232,7 @@ class Queue():
 ## 단점
 - 데이터를 탐색하기 어렵다.
 
-## Stack의 ADT
+## 스택의 ADT
 - push(None): 맨 위에 값 추가
 - pop(data): 가장 최근에 넣은 맨 위의 값을 제거
 - peak(data or -1): 스택의 변형 없이 맨 위에 값을 출력
@@ -285,13 +285,13 @@ class Stack():
         return self.stack
 ```
 
-# Deque
-- 큐가 선입선출 방식으로 작동한다면, 양방향 큐가 있는데 그것이 바로 Deque이다.
+# 덱(Deque)
+- 큐가 선입선출 방식으로 작동한다면, 양방향 큐가 있는데 그것이 바로 덱이다.
 - 앞, 뒤 양쪽에서 엘리먼트를 추가하거나 제거할 수 있다.
 - 덱는 양 끝 엘리먼트의 append와 pop가 압도적으로 빠르다.
-- 컨테이너의 양 끝 엘리먼트에 접근하여 삽입 또는 제거를 할 경우, 일반적인 리스트가 이러한 연산에 O(n)이 소요되는 데 반해, 데크는 O(1)로 접근이 가능하다.
+- 컨테이너의 양 끝 엘리먼트에 접근하여 삽입 또는 제거를 할 경우, 일반적인 리스트가 이러한 연산에 O(n)이 소요되는 데 반해, 덱은 O(1)로 접근이 가능하다.
 
-## When? Why?
+## 언제? 왜?
 - 덱은 스택처럼 사용할 수도 있고, 큐처럼 사용할 수도 있다.
 - 시작점의 값을 넣고 빼거나, 끝 점의 값을 넣고 빼는 데 최적화된 연산 속도를 제공한다.
 - 대부분의 경우 덱은 리스트보다 월등한 옵션이다.
@@ -411,7 +411,7 @@ class Deque:
         return deque_list
 ```
 
-# Reference
+# 참조
 
 - [Python - 데크(deque) 언제, 왜 사용해야 하는가?](https://leonkong.cc/posts/-python-deque.html)
 - [Python으로 구현하는 자료구조: Stack](https://daimhada.tistory.com/105)
@@ -422,3 +422,4 @@ class Deque:
 - [데이터의 7V](https://3months.tistory.com/348)
 - [자료구조를 알아야 하는 이유](https://youtu.be/OH7prOt3vQA)
 - [무조건 알아야하는 자료구조/ADT](https://youtu.be/Nk_dGScimz8)
+- [추상화](https://ko.wikipedia.org/wiki/추상화_(컴퓨터_과학))
