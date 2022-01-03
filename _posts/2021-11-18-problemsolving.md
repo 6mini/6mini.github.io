@@ -4,7 +4,7 @@ description: 프로그래밍 진행과정. 파이썬을 활용한 실습 및 예
 categories:
  - Computer Science
 tags: [컴퓨터 사이언스]
-mathjax: enable
+# {% include ad.html %}
 ---
 
 # 문제해결
@@ -76,6 +76,8 @@ print(common_num)
 [2, 3, 4]
 '''
 ```
+
+{% include ad.html %}
 
 ```py
 # 딕셔너리 컴프리헨션
@@ -193,7 +195,7 @@ assert not bool_return(3,6)
 
 <img width="573" alt="스크린샷 2021-11-18 02 12 18" src="https://user-images.githubusercontent.com/79494088/142248683-ede0c57e-640e-41ff-9abf-3f3352a8d4fb.png">
 
-# Reference
+# 참조
 - [우아하게 준비하는 테스트와 리팩토링 - PyCon Korea 2018](https://www.slideshare.net/KennethCeyer/pycon-korea-2018-109833085)
 - [Python 코드 리팩터링](https://docs.microsoft.com/ko-kr/visualstudio/python/refactoring-python-code?view=vs-2019)
 - [string의 변화에 대해 예상해보자](https://leetcode.com/problemset/all/?topicSlugs=string)
