@@ -88,6 +88,8 @@ mathjax: enable
 - 모집단을 미리 여러 그룹으로 나누고, 그 그룹별로 무작위 추출을 수행하는 방법이다.
 	- ex) 여론 조사를 위해 사람을 나이대 별로 나누고, 해당 그룹안에서 무작위 추출
 
+{% include ad.html %}
+
 ### 4. Cluster sampling
 
 ![68747470733a2f2f692e696d6775722e636f6d2f7a4e386a586f772e706e67](https://user-images.githubusercontent.com/79494088/144994338-04968b8e-cdcd-478a-8493-32baed903bdb.png)
