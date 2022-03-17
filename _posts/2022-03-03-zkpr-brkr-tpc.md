@@ -376,8 +376,7 @@ Option                                   Description
     - 부트스트랩(Bootstrap) 서버와 토픽 이름, 파티션(Partition) 수와 레플리케이션 팩터(Replication Factor) 수를 입력해야한다.
 
 ```s
-$ bin/kafka-topics.sh --create --bootstrap-server localhos
-t:9092 --topic first-topic --partitions 1 --replication-factor 1
+$ bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic first-topic --partitions 1 --replication-factor 1
 '''
 Created topic first-topic.
 '''
