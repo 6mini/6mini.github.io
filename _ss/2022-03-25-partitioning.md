@@ -1,6 +1,6 @@
 ---
-title: '[아테나] 아테나(Athena)를 위한 S3 데이터 파티셔닝'
-description: 
+title: '[아테나] 아테나(Athena)를 위한 Amazon S3 데이터 파티셔닝'
+description: 하이브(Hive)의 간단한 개념과 아테나 분석 환경을 위한 S3 데이터 파티셔닝 및 테이블 생성 및 로드
 categories:
  - Data Engineering
 tags: [데이터 엔지니어링, 아테나, S3]
@@ -75,11 +75,17 @@ CREATE EXTERNAL TABLE IF NOT EXISTS table_name (
 STORED AS PARQUET LOCATION 's3://bucket-name/large-category/medium-category' tblproperties("parquet.compress"="SNAPPY")
 ```
 
-### 데이터 로드
+### 테이블 로드
 
 ```sql
 MSCK REPAIR TABLE table_name
 ```
 
-### 데이터 쿼리
+### 테이블 쿼리
+
+```sql
+SELECT *
+FROM table_name
+WHERE month = '03'
+```
 
