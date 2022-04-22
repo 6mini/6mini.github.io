@@ -18,7 +18,7 @@ tags: [카프카, 데이터 엔지니어링, 컨슈머]
        - 파티션 하나를 가진 토픽이다.
 
 ```s
-(sixat) 14:48:10 kafka_2.13-3.1.0 ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic first-topic
+$ ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic first-topic
 >
 ```
 
@@ -31,7 +31,7 @@ tags: [카프카, 데이터 엔지니어링, 컨슈머]
 ## 문제 상황
 
 ```s
-(sixat) 14:48:10 kafka_2.13-3.1.0 ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic first-topic
+$ ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic first-topic
 >1st msg         
 >2nd msg
 ```
@@ -41,7 +41,7 @@ tags: [카프카, 데이터 엔지니어링, 컨슈머]
 - 각각의 컨슈머 그룹을 가지는 컨슈머를 만들었을 땐 모두가 메세지를 받았는데, 하나의 컨슈머 그룹으로 묶어주게 되면 컨슈머 중 하나만 메세지를 받게 된다.
 
 ```s
-(sixat) 14:48:10 kafka_2.13-3.1.0 ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic first-topic
+$ ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic first-topic
 >hello from 2nd producer
 >oing?
 ```
@@ -57,7 +57,7 @@ tags: [카프카, 데이터 엔지니어링, 컨슈머]
 - 파티션을 만들기 위해 새로운 토픽을 만들 것이다.
 
 ```s
-(sixat) 14:44:02 kafka_2.13-3.1.0 ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+$ ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 '''
 __consumer_offsets
 first-topic
@@ -69,11 +69,11 @@ first-topic
 
 
 ```s
-(sixat) 14:44:17 kafka_2.13-3.1.0 ./bin/kafka-topics.sh --create --topic second-topic --bootstrap-server localhost:9092 --partitions 2 --replication-factor 1
+$ ./bin/kafka-topics.sh --create --topic second-topic --bootstrap-server localhost:9092 --partitions 2 --replication-factor 1
 '''
 Created topic second-topic.
 '''
-(sixat) 14:47:22 kafka_2.13-3.1.0 ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --list                                                             
+$ ./bin/kafka-topics.sh --bootstrap-server localhost:9092 --list                                                             
 '''
 __consumer_offsets
 first-topic
@@ -84,15 +84,15 @@ second-topic
 - 새로운 토픽을 생성했다.
 
 ```s
-(sixat) 14:48:48 kafka_2.13-3.1.0 ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic second-topic
+$ ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic second-topic
 
-(sixat) 14:50:07 kafka_2.13-3.1.0 ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic second-topic --group second-group
+$ ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic second-topic --group second-group
 ```
 
 - 프로듀서와 컨슈머 모두 `second-topic`을 사용하게끔 교체하고, `second-group`으로 할당한다.
 
 ```s
-(sixat) 14:48:10 kafka_2.13-3.1.0 ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic second-topic 
+$ ./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic second-topic 
 >1
 >2
 >3
