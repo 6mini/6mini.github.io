@@ -111,6 +111,8 @@ LIMIT 1;
 
 <img width="369" alt="image" src="https://user-images.githubusercontent.com/79494088/162686774-597f5bea-4d3f-45e6-ac90-0370e5b8497b.png">
 
+### 풀이 
+
 ```sql
 SELECT ROUND(AVG(population))
 FROM city
@@ -118,6 +120,8 @@ FROM city
 
 ## Revising Aggregations - The Sum Function
 - Query the total population of all cities in CITY where District is California.
+
+### 풀이
 
 ```sql
 select sum(population)
@@ -128,6 +132,8 @@ where district = 'California'
 ## Revising Aggregations - Averages
 - Query the average population of all cities in CITY where District is California.
 
+### 풀이
+
 ```sql
 select avg(population)
 from city
@@ -137,6 +143,8 @@ where district = 'California'
 ## Revising Aggregations - The Count Function
 - Query a count of the number of cities in CITY having a Population larger than 100,000.
 
+### 풀이
+
 ```sql
 select count(*)
 from city
@@ -145,6 +153,8 @@ where population > 100000
 
 ## Population Density Difference
 - Query the difference between the maximum and minimum populations in CITY.
+
+### 풀이
 
 ```sql
 select max(population) - min(population)
@@ -156,6 +166,8 @@ from city
 - The STATION table is described as follows:
 
 <img width="307" alt="image" src="https://user-images.githubusercontent.com/79494088/162911835-735c4d2a-59ec-4737-a783-14ebdc099c5e.png">
+
+### 풀이
 
 ```sql
 select count(city) - count(distinct city)
@@ -169,6 +181,8 @@ from station
     - group by를 통해 최고 금액과 갯수를 구한다.
 
 <img width="352" alt="image" src="https://user-images.githubusercontent.com/79494088/163077932-fa4d8db0-8160-471d-b023-8167587a0b12.png">
+
+### 풀이
 
 ```sql
 select months * salary as earnings
