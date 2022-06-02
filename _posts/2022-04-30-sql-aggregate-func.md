@@ -2,8 +2,8 @@
 title: '[SQL] 집계 함수(COUNT, SUM, AVG, MIN/MAX) 및 GROUP BY, ORDER BY'
 description: '[백문이불여일타] 데이터 분석을 위한 중급 SQL 중 집계함수 간략 정리 및 해커랭크 문제 풀이'
 categories:
- - Data Engineering
-tags: [SQL, 데이터 엔지니어링]
+ - SQL
+tags: [SQL]
 ---
 
 # 간략 정리
@@ -124,9 +124,9 @@ FROM city
 ### 풀이
 
 ```sql
-select sum(population)
-from city
-where district = 'California'
+SELECT SUM(population)
+FROM city
+WHERE district = 'California'
 ```
 
 ## Revising Aggregations - Averages
@@ -135,9 +135,9 @@ where district = 'California'
 ### 풀이
 
 ```sql
-select avg(population)
-from city
-where district = 'California'
+SELECT avg(population)
+FROM city
+WHERE district = 'California'
 ```
 
 ## Revising Aggregations - The Count Function
@@ -146,9 +146,9 @@ where district = 'California'
 ### 풀이
 
 ```sql
-select count(*)
-from city
-where population > 100000
+SELECT COUNT(*)
+FROM city
+WHERE population > 100000
 ```
 
 ## Population Density Difference
@@ -157,8 +157,8 @@ where population > 100000
 ### 풀이
 
 ```sql
-select max(population) - min(population)
-from city
+SELECT MAX(population) - MIN(population)
+FROM city
 ```
 
 ## Weather Observation Station 4
@@ -170,8 +170,8 @@ from city
 ### 풀이
 
 ```sql
-select count(city) - count(distinct city)
-from station
+SELECT COUNT(city) - COUNT(DISTINCT city)
+FROM station
 ```
 
 ## Top Earners
@@ -185,10 +185,10 @@ from station
 ### 풀이
 
 ```sql
-select months * salary as earnings
-     , count(*)
-from employee
-group by earnings
-order by earnings desc
-limit 1
+SELECT months * salary AS earnings
+     , COUNT(*)
+FROM employee
+GROUP BY earnings
+ORDER BY earnings DESC
+LIMIT 1
 ```
