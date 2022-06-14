@@ -2,7 +2,7 @@
 title: "[ML] Basic Assumptions of Linear Regression"
 description: How to make good linear regression model? The four basic assumptions of linear regression analysis.
 categories:
- - DaSeng
+ - TADA English Study
 tags: [Linear Regression]
 mathjax: enable
 ---

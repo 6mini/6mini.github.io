@@ -2,7 +2,7 @@
 title: "[ML] Heteroscedasticity"
 description: Problems and solutions of heteroscedasticity.
 categories:
- - DaSeng
+ - TADA English Study
 tags: []
 mathjax: enable
 ---
