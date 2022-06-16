@@ -1,6 +1,6 @@
 ---
 title: '[SQL] 집계 함수(COUNT, SUM, AVG, MIN/MAX) 및 GROUP BY, ORDER BY'
-description: '데이터 분석을 위한 중급 SQL 집계함수 간략 정리 및 해커랭크 문제 풀이'
+description: '[데이터 분석을 위한 중급 SQL] 집계 함수 및 GROUP BY, ORDER BY에 대한 간략 정리 및 해커랭크 문제 풀이'
 categories:
  - SQL
 tags: [SQL]
