@@ -13,19 +13,16 @@ type: about
 - **습관의 힘**을 깨달은 덕에 **'1일 1커밋'**운동과,<br>
 **기술 블로그**를 운영하며 자신뿐 아니라 타인의 성장도 도모합니다.
 - **문제를 정의**하여, **가설**을 세우고 **데이터 수집 및 전처리**부터<br>
-**모델링 및 모델 성능 최적화**, **프로덕트 개발 및 배포**까지 진행하는 것을 즐깁니다.<br>
+**모델링** 및 모델 성능 **최적화**, **프로덕트 개발 및 배포**까지 진행하는 것을 즐깁니다.<br>
 **실제 고객이 활용할 수 있는 유용한 프로덕트**를 만드는 것이 목표입니다.
 
-## Career
+
+## Career  ──
 - 🛩 **Navy** [Air Crew Sergeant] 2013. 4. 1. - 2021. 2.28.
 - 🤖 **Codestates** [AI Bootcamp 5th] 2021. 7. 8. ~ 2022. 1.27.
 - 🏢 **Moments Company** [Data Engineer] 2022. 2. 7. ~
 
-## Contact & Channel
-- **Email** \| [real6mini@gmail.com](mailto:real6mini@gmail.com)
-- **[GitHub](https://github.com/6mini)** \| **[Blog](https://6mini.github.io/)** \| **[Portfolio](https://6mini.notion.site/6mini/6mini-d024f3f3a36e424f9de878a5a049c310)**
-
-## Skills
+## Skills  ──
 
 ### Data Science
 - **Python**
@@ -57,3 +54,7 @@ type: about
 
 ### etc
 - **Git**: 협업을 위한 브랜치 생성, 머지, 수정 내용 충돌 시 되돌리거나 수정 후 머지, 풀리퀘스트 진행 가능
+
+## Contact & Channel  ──
+- **Email** \| [real6mini@gmail.com](mailto:real6mini@gmail.com)
+- **[GitHub](https://github.com/6mini)** \| **[Blog](https://6mini.github.io/)** \| **[Portfolio](https://6mini.notion.site/6mini/6mini-d024f3f3a36e424f9de878a5a049c310)**
