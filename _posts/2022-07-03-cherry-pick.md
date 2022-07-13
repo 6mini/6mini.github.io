@@ -3,7 +3,7 @@ title: '[깃] 다른 브랜치의 커밋을 가져오는 체리 픽(cheery-pick)
 description: "[상황별 깃(Git) 핸들링] 체리 픽(cheery-pick)을 통해 다른 브랜치에 있는 커밋을 내 브랜치로 가져오는 방법"
 categories:
  - Git
-tags: [깃, 체리 픽]
+tags: [깃, 체리 픽, cherry-pick]
 ---
 
 # `git cherry-pick {커밋 ID}`
