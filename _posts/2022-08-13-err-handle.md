@@ -1,9 +1,9 @@
 ---
 title: '[클린 코드] 에러 핸들링'
-description: "깔끔한 코드를 위한 에러 핸들링"
+description: "파이썬에서의 깔끔한 코드를 위한 에러 핸들링"
 categories:
  - Clean Code
-tags: [클린 코드]
+tags: [클린 코드, 에러 핸들링]
 ---
 
 # 오류 코드보다는 예외 사용
