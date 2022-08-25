@@ -1,6 +1,6 @@
 ---
 title: '[클린 코드] 에러 핸들링'
-description: "파이썬에서의 깔끔한 코드를 위한 에러 핸들링"
+description: "[파이썬에서의 깔끔한 코드] 에러 핸들링"
 categories:
  - Clean Code
 tags: [클린 코드, 에러 핸들링]

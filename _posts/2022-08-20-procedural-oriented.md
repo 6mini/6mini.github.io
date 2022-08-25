@@ -1,6 +1,6 @@
 ---
 title: '[객체 지향] 프로그래밍 패러다임 흐름: 절차 지향'
-description: "객체 지향 프로그래밍 전 절차 지향 프로그래밍 패러다임의 개념 및 예시, 장단점"
+description: "[객체 지향 프로그래밍] 절차 지향 프로그래밍 패러다임의 개념 및 예시, 장단점"
 categories:
  - Object Oriented Programming
 tags: [객체 지향 프로그래밍]
