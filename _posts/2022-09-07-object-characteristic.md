@@ -1,6 +1,6 @@
 ---
 title: '[객체 지향] 객체 지향의 특성'
-description: "코드를 통한 객체 지향 특성 이해와 객체 지향적으로 소프트웨어를 설계하는 방법"
+description: "[객체 지향 프로그래밍] 이해하기 쉬운 파이썬 코드를 통한 객체 지향 특성 이해와 객체 지향적으로 소프트웨어를 설계하는 방법"
 categories:
  - Object Oriented Programming
 tags: [객체 지향 프로그래밍]
