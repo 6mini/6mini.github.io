@@ -57,8 +57,8 @@ class User:
 - 이렇게 정의한 인스턴스 변수는 다음처럼 인스턴스별로 다르게 설정할 수 있다.
 
 ```py
-user_1 = User(name="grab", job="data_engineer")
-user_2 = User(name="heumsi", job="project_manager")
+user_1 = User(name="6mini", job="data_engineer")
+user_2 = User(name="nari", job="ceo")
 ```
 
 - 인스턴스 변수는 다음과 같이 접근한다.
@@ -66,7 +66,7 @@ user_2 = User(name="heumsi", job="project_manager")
 ```py
 user_1.name
 '''
-grab
+6mini
 '''
 
 user_1.job
@@ -99,14 +99,14 @@ User.num_users
 '''
 
 # 인스턴스화한 후에도 접근 가능
-user_1 = User(name="grab", job="data_engineer")
+user_1 = User(name="6mini", job="data_engineer")
 user_1.num_users
 '''
 1
 '''
 
 # 서로 다른 인스턴스더라도 클래스 변수는 공유
-user_2 = User(name="heumsi", job="project_manager")
+user_2 = User(name="nari", job="ceo")
 user_2.num_users
 '''
 2
@@ -132,14 +132,14 @@ class User:
     def work(self) -> None:
         if self.job == "data_enginner":
             print("데이터 엔지니어링 관련된 일을 합니다.")
-        elif self.job == "project_manager":
-            print("프로젝트 매니징 관련된 일을 합니다.")
+        elif self.job == "ceo":
+            print("사업 총괄 관련된 일을 합니다.")
 ```
 
 - 이렇게 정의된 공개형 메서드는 클래스 외부에서 다음처럼 사용할 수 있다.
 
 ```py
-user_1 = User(name="grab", job="data_engineer")
+user_1 = User(name="6mini", job="data_engineer")
 user_1.work()
 '''
 데이터 엔지니어링 관련된 일을 합니다.
@@ -166,8 +166,8 @@ class User:
     def _get_work_type(self) -> str:
         if self.job == "data_enginner":
             return "데이터 엔지니어링"
-       	elif self.job == "project_manager":
-            return "프로젝트 매니징"
+       	elif self.job == "ceo":
+            return "사업 총괄"
 ```
 
 - 비공개형 메서드는 외부에서 접근하지 못하거나, 할 수 있더라도 하지 않는 게 관습이다.
@@ -198,7 +198,7 @@ class DataEnginner(Job):
     
     
 class ProjectManager(Job):
-    work_type = "프로젝트 매니징"
+    work_type = "사업 총괄"
 ```
 
 - `DataEnginner`, `ProjectManager` 클래스가 `Job` 클래스를 상속받았다.
@@ -251,7 +251,7 @@ class DataEngineer(Job):
 
 class ProjectManager(Job):
     def do(self) -> None:
-        print("프로젝트 매니징 관련된 일을 합니다.")
+        print("사업 총괄 관련된 일을 합니다.")
 data_engineer = DataEngineer()
 data_enginner.do()
 '''
