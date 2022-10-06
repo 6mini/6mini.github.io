@@ -7,7 +7,7 @@ tags: [객체 지향 프로그래밍]
 ---
 
 # 개념
-- 객체 지향(Object Oriented) 프로그래밍은 객체라고 하는 단위에 책임을 명확히 하고 서로 협력하도록 프로그래밍을 하는 패러다임이다.
+- **객체 지향(Object Oriented) 프로그래밍은 객체라고 하는 단위에 책임을 명확히 하고 서로 협력하도록 프로그래밍을 하는 패러다임**이다.
 - 모든 것을 객체로 나누어 생각하고, 필요할 때 객체들을 활용하고 서로 협력하여 일을 수행한다.
 - 절차지향과 다르게 객체는 데이터와 함수(메서드)를 함께 가지고 있다.
 - 객체 내부의 데이터는 외부에 공개할 필요가 없거나 해서는 안 되는 데이터라면 모두 자신 내부에 숨겨 외부에서 알지 못하도록 한다.
@@ -94,7 +94,7 @@ class FileReader(ABC):
     def _read(self, data: str) -> str:
         pass
 
-    # 공통으로 사용하는 메서드입니다.
+    # 공통으로 사용하는 메서드이다.
     def _validate(self, file_path: str) -> None:
         if not file_path.endswith(self.file_type):
             raise ValueError(f"파일 확장자가 {self.file_type} 아닙니다.")
@@ -103,7 +103,7 @@ class FileReader(ABC):
     def _open_file(file_path: str) -> str:
         ...
 
-# txt 파일을 읽는 책임을 가진 FileReader 파생 클래스입니다.
+# txt 파일을 읽는 책임을 가진 FileReader 파생 클래스이다.
 class TxtFileReader(FileReader):
     def file_type(self) -> str:
         return "txt"
@@ -114,7 +114,7 @@ class TxtFileReader(FileReader):
     ...
 
 
-# csv 파일을 읽는 책임을 가진 FileReader 파생 클래스입니다.
+# csv 파일을 읽는 책임을 가진 FileReader 파생 클래스이다.
 class CsvFileReader(FileReader):
     def file_type(self) -> str:
         return "csv"
@@ -152,7 +152,7 @@ class Main:
         )
 ```
 
-- 만약 csv나 xlsx 파일을 읽어야할 경우 다음처럼 코드 한줄만 바꾸면 된다.
+- 만약 `csv`나 `xlsx` 파일을 읽어야할 경우 다음처럼 코드 한줄만 바꾸면 된다.
 
 ```py
 class Main:
