@@ -3,7 +3,7 @@ title: '[객체 지향] 의존성, 응집도, 결합도'
 description: "[객체 지향 프로그래밍] 의존성, 응집도, 결합도의 개념과 파이썬 코드를 통한 예시"
 categories:
  - Object Oriented Programming
-tags: [객체 지향 프로그래밍]
+tags: [객체 지향 프로그래밍, 의존성, 응집도, 결합도]
 ---
 
 # 의존성
@@ -57,7 +57,7 @@ class DataEngineer(Job):
     
     
 class ProjectManager(Job):
-    work_type = "프로젝트 매니징"
+    work_type = "사업 총괄"
     
     
 class User:
@@ -74,17 +74,17 @@ class User:
 - 하지만 다음처럼 실제 코드가 실행될 때 `User`에 `DataEngineer`나 `ProjectManager`에 의존성이 있도록 만들어줄 수 있다.
 
 ```py
-user_1 = User(name="grab", job=DataEngineer())  # 여기서 동적으로 의존성을 만들어준다.
+user_1 = User(name="6mini", job=DataEngineer())  # 여기서 동적으로 의존성을 만들어준다.
 user_1.work()
 '''
-데이터 엔지니어링 관련된 일을 합니다.
+사업 총괄 관련된 일을 합니다.
 '''
 ```
 
 - 만약 `ProjectManager`로 의존성을 주고 싶으면 다음처럼 하면 된다.
 
 ```py
-user_2 = User(name="grab", job=ProjectManager())  # 여기서 동적으로 의존성을 만들어준다.
+user_2 = User(name="6mini", job=ProjectManager())  # 여기서 동적으로 의존성을 만들어준다.
 user_2.work()
 '''
 프로젝트 매니징 관련된 일을 합니다.
@@ -92,7 +92,7 @@ user_2.work()
 ```
 
 - 동적 의존성은 이렇게 코드 레벨이 아닌, 실제 실행 환경에서 동적으로 의존 관계를 형성할 수 있는 의존성을 말한다.
-- 보통 위와 같이 추상 클래스 혹은 인터페이스를 파라미터 타입으로 두고 (`def __init__(self, name: str, job: Job)` 부분) 실제로 위 클래스를 생성할 때 구체적인 클래스를 인자로 넘겨주는 방식(`User(name="grab", job=DataEngineer())`)으로 동적 의존성을 구현하곤 한다.
+- 보통 위와 같이 추상 클래스 혹은 인터페이스를 파라미터 타입으로 두고 (`def __init__(self, name: str, job: Job)` 부분) 실제로 위 클래스를 생성할 때 구체적인 클래스를 인자로 넘겨주는 방식(`User(name="6mini", job=DataEngineer())`)으로 동적 의존성을 구현하곤 한다.
 
 - 위와 같이 정적 의존성 대상을 고수준 코드로, 동적 의존성 대상을 저수준 코드로 넣어주게 되면 더 유연한 설계가 가능해진다.
 
@@ -107,7 +107,7 @@ user_2.work()
 ## 응집도
 - 객체의 책임에 맞게 속성과 메서드가 유기적으로 결합되어 있는 정도를 응집도라고 한다.
 - 객체는 하나의 책임(SRP)을 수행하도록 잘 설계되어야 한다.
-- 그래야 중구난방으로 객체가 존재하지도 않고 하나의 객체가 큰 책임을 가지지도 않는다.
+<br>그래야 중구난방으로 객체가 존재하지도 않고 하나의 객체가 큰 책임을 가지지도 않는다.
 - 이때 응집도를 높게 코드를 작성한다면, 관련성이 높은 속성과 메서드가 모여있기에 흐름을 읽기 편해진다.
 - 또한 불필요한 속성과 메서드를 줄일 수 있어 더 탄탄한 코드를 작성할 수 있다.
 
