@@ -1,5 +1,5 @@
 ---
-title: '[깃] 다른 브랜치의 커밋을 가져오는 체리 픽(cheery-pick)'
+title: '[깃(Git)] 9. 다른 브랜치의 커밋을 가져오는 체리 픽(cheery-pick)'
 description: "[상황별 깃(Git) 핸들링] 체리 픽(cheery-pick)을 통해 다른 브랜치에 있는 커밋을 내 브랜치로 가져오는 방법"
 categories:
  - Git

@@ -1,9 +1,9 @@
 ---
-title: '[깃] 로그(log & reflog)를 통한 히스토리 확인'
+title: '[깃(Git)] 3. 로그(log & reflog)를 통한 히스토리 확인'
 description: "[상황별 깃(Git) 핸들링] 로그 및 쇼(git log & reflog & show)를 통한 이전 커밋 내역들과 변경사항 확인 방법"
 categories:
  - Git
-tags: [깃]
+tags: [깃, Git, 로그, log, show, reflog]
 ---
 
 - `HEAD`는 커밋 내역에서 현재 커밋(보통 가장 최신 커밋)을 가리키는 심볼릭 링크(포인터)이다.
@@ -98,7 +98,7 @@ ecf9f42 HEAD@{1}: commit: a 파일 추가
 
 - `git reflog`는 이전 명령어(ex. `git reset --hard`)를 취소하고 싶을 때 유용하다.
 - `git reset` 명령어에 대한 설명은 아래에서 나오지만, 여기서 간략하게 `git reflog`를 사용하는 상황을 살펴본다.
-- 만약 작업 중에 다음처럼 ``git reset --hard`로 이전 커밋으로 돌아갔다고 가정한다.
+- 만약 작업 중에 다음처럼 `git reset --hard`로 이전 커밋으로 돌아갔다고 가정한다.
 
 ```s
 $ git reset ecf9f42 --hard

@@ -1,9 +1,9 @@
 ---
-title: '[깃] 이전에 쌓인 커밋을 변경하기 위한 어맨드 커밋 및 리베이스(amend commit & rebase)'
+title: '[깃(Git)] 7. 이전에 쌓인 커밋을 변경하기 위한 어맨드 커밋 및 리베이스(amend commit & rebase)'
 description: "[상황별 깃(Git) 핸들링] 어맨드 커밋 및 리베이스(amend commit & rebase)을 이용하여 이전에 쌓인 커밋을 변경하는 방법"
 categories:
  - Git
-tags: [깃]
+tags: [깃, Git, 어맨드, 리베이스, amend, rebase]
 ---
 
 - 깃을 사용하다 보면 이전 커밋을 변경해야 하는 경우들이 종종 있다.
@@ -40,7 +40,7 @@ $ git commit --amend
 '''
 ```
 
-- 리모트 레포지토리로 푸시하고 싶다면, 포스푸시를 이용해야 한다.
+- 리모트 레포지토리로 푸시하고 싶다면, 포스 푸시(`push --force`)를 이용해야 한다.
 
 ```s
 $ git push --force

@@ -1,9 +1,9 @@
 ---
-title: '[깃] 스쿼시 및 리베이스 머지(squash & rebase merge)'
-description: "[상황별 깃(Git) 핸들링] 스쿼시 및 리베이스 머지(squash & rebase merge)를 통해 브랜치에 머지할 때 머지 커밋을 남기지 않는 방법"
+title: '[깃(Git)] 8. 스쿼시 및 리베이스 머지(squash & rebase merge)를 통한 각종 머지 전략'
+description: "[상황별 깃(Git) 핸들링] 스쿼시 및 리베이스 머지(squash & rebase merge)를 통해 두 브랜치를 합치는 3가지 전략"
 categories:
  - Git
-tags: [깃]
+tags: [깃, Git, 스쿼시, 리베이스, squash, rebase]
 ---
 
 - 두 브랜치를 합치는 방법에는 크게 3가지가 존재한다.

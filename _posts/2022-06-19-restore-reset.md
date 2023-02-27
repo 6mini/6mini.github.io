@@ -1,5 +1,5 @@
 ---
-title: '[깃] 리스토어 및 리셋(restore & reset)을 통한 커밋 초기화'
+title: '[깃(Git)] 4. 리스토어 및 리셋(restore & reset)을 통한 커밋 초기화'
 description: "[상황별 깃(Git) 핸들링] 리스토어 및 리셋(restore & reset)을 통해 변경 사항 및 커밋을 초기화하는 방법"
 categories:
  - Git
