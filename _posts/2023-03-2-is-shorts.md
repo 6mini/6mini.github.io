@@ -1,6 +1,6 @@
 ---
-title: '[유튜브] 비디오(video) ID를 통해 일반영상 or 쇼츠영상 분류 in 파이썬(python)'
-description: "유튜브 비디오 id를 입력하면, 일반영상인지 쇼츠영상인지 판단하여 알려주는 간단한 함수"
+title: '[유튜브] 영상 ID를 통해 일반영상 or 쇼츠영상 분류 in 파이썬(python)'
+description: "유튜브(Youtube) 비디오(video) id를 입력하면, 일반영상인지 쇼츠영상인지 판단하여 알려주는 간단한 함수"
 categories:
  - Data Engineering
 tags: [유튜브, youtube, 쇼츠, shorts]
