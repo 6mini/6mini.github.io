@@ -26,13 +26,13 @@ EC2의 요금을 절감하기 위해 플로우 계획은 "프로그램이 위치
 
 MWAA에서 요구 사항 파일인 `requirements.txt`을 아래와 같이 수정한다.
 
-```txt
+```
 apache-airflow-providers-ssh
 ```
 
 #### S3로 전송 및 설치
 
-```s
+```
 $ aws s3 cp requirements.txt s3://your-bucket/
 ```
 
@@ -42,7 +42,7 @@ $ aws s3 cp requirements.txt s3://your-bucket/
 
 해당 인스턴스 SSH 연결에 사용되는 `.pem`형태의 비밀 키를 dags에 전송해야 에어플로우가 해당 인스턴스에 접근할 수 있다.
 
-```s
+```
 $ aws s3 cp your-secret-key.pem s3://your-bucket/dags/
 ```
 
@@ -72,14 +72,14 @@ $ aws s3 cp your-secret-key.pem s3://your-bucket/dags/
 
 `requirements.txt`를 수정하는데 기존에 다른 것이 있다면 줄바꿈으로 추가하면 된다.
 
-```txt
+```
 apache-airflow-providers-ssh
 apache-airflow-providers-amazon
 ```
 
 #### S3로 전송 및 설치
 
-```s
+```
 $ aws s3 cp requirements.txt s3://your-bucket/
 ```
 
