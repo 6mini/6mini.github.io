@@ -192,7 +192,7 @@ Certificate updated!
 2. 호스팅 영역 > 등록한 도메인 접속
 3. 레코드의 NS유형 값/트래픽 라우팅 대상 4가지 복사
 
-!()[https://github.com/6mini/6mini.github.io/assets/79494088/94126f74-9185-47e1-99c2-7ad6e957e70f]
+![](https://github.com/6mini/6mini.github.io/assets/79494088/94126f74-9185-47e1-99c2-7ad6e957e70f)
 
 ## 가비아 설정
 
@@ -201,7 +201,7 @@ Certificate updated!
 3. 해당 도메인 관리
 4. 네임서버 1~4차에 위 값 입력: 마지막 `.`은 제거
 
-!()[https://github.com/6mini/6mini.github.io/assets/79494088/85d6d06f-9e7e-466b-b8ee-2a1b684c861d]
+![](https://github.com/6mini/6mini.github.io/assets/79494088/85d6d06f-9e7e-466b-b8ee-2a1b684c861d)
 
 ## 완료
 
