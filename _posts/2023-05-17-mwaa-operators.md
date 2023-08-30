@@ -2,7 +2,7 @@
 title: '[AWS] Amazon MWAA를 이용한 EC2 인스턴스 스케쥴링과 원격 Python 스크립트 실행(SSHOperators, AWSOperators 사용법)'
 description: "Amazon Managed Workflow for Apache Airflow(MWAA)를 활용하여 EC2 인스턴스에서 Python 스크립트를 정기적으로 실행하는 방법을 설명한다. AWS EC2 인스턴스를 시작하고 종료하는 방법, IP 주소를 동적으로 가져오는 방법, 그리고 SSH를 이용한 원격 명령 실행에 대해 자세히 알아본다."
 categories:
- - AWS, Data Engineering
+ - AWS
 tags: [MWAA, AWS, EC2, SSHOperators, AWSOperators]
 ---
 
@@ -32,7 +32,7 @@ apache-airflow-providers-ssh
 
 #### S3로 전송 및 설치
 
-```
+```sh
 $ aws s3 cp requirements.txt s3://your-bucket/
 ```
 
@@ -42,7 +42,7 @@ $ aws s3 cp requirements.txt s3://your-bucket/
 
 해당 인스턴스 SSH 연결에 사용되는 `.pem`형태의 비밀 키를 dags에 전송해야 에어플로우가 해당 인스턴스에 접근할 수 있다.
 
-```
+```sh
 $ aws s3 cp your-secret-key.pem s3://your-bucket/dags/
 ```
 
@@ -79,7 +79,7 @@ apache-airflow-providers-amazon
 
 #### S3로 전송 및 설치
 
-```
+```sh
 $ aws s3 cp requirements.txt s3://your-bucket/
 ```
 
