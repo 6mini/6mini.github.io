@@ -209,6 +209,6 @@ Certificate updated!
 
 # 참조
 
-- (Flask Microservice 구축 - Zappa로 AWS Lambda에 Flask 띄우기)[https://panda5176.tistory.com/39]
-- (Using a Custom Domain)[https://romandc.com/zappa-django-guide/walk_domain/]
-- ([AWS] EC2 와 도메인 연결하기 (feat. 가비아))[https://developer-ping9.tistory.com/320]
+- [Flask Microservice 구축 - Zappa로 AWS Lambda에 Flask 띄우기]{https://panda5176.tistory.com/39}
+- [Using a Custom Domain](https://romandc.com/zappa-django-guide/walk_domain/)
+- [[AWS] EC2 와 도메인 연결하기 (feat. 가비아)](https://developer-ping9.tistory.com/320)
