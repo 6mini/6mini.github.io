@@ -152,7 +152,7 @@ Deployment complete! https://q1w2e3r4t5y6.execute-api.ap-northeast-2.amazonaws.c
 3. 해당 도메인 관리
 4. DNS 정보 > 도메인 연결 설정
 5. DNS 설정 > 레코드 추가
-6. 타입은 CNAME, 호스트 이름에 CNAME 이름 중 `.com.`을 제외하고 입력
+6. 타입은 CNAME, 호스트 이름에 CNAME 이름 중 `domain.com.`을 제외하고 입력
 7. 값/위치에 CNAME 값 입력
 8. 확인 > 저장
 
